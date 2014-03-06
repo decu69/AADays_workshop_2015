@@ -1,0 +1,1 @@
+Notes from Wiki are now stored in the *notes* directory (as a `Markdown` files).
