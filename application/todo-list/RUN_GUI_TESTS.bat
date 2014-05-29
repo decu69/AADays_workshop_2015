@@ -1,5 +1,4 @@
-
-for %%A in (test_gui_1 test_gui_2 test_gui_3) do call :run %%A
+for %%A in (test_gui_1) do call :run %%A
 exit /b 0
 
 :run
@@ -22,16 +21,3 @@ del tmp\pids\server.pid
 endlocal
 exit /b 0
 
-for %%A in (test_gui_1 test_gui_2 test_gui_3) do (
-bundle exec rake db:drop & bundle exec rake db:migrate
-start cmd /k Call START_SERVER.bat
-bundle exec rake db:seed & bundle exec rake db:test:clone & pushd gui-tests & bundle exec cucumber features -c -t @%%A & popd
-IF EXIST tmp/pids/server.pid (
-        set /P pid=<tmp/pids/server.pid
-        ::echo %pid%
-        taskkill /f /t /pid %pid%
-        del tmp\pids\server.pid
-        set pid=
-)
-)
-::%%~nA
