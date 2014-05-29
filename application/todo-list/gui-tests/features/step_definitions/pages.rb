@@ -1,6 +1,6 @@
 def createPageObject(pageName)
   case pageName
-    when 'log i'
+    when 'log in'
       LoginPage.new(Capybara.current_session)
 
     when 'lists'
@@ -23,4 +23,12 @@ end
 
 When(/^I wait until pending requests will finish$/) do
   @page.waitForPendingRequests(@page.getSession())
+end
+
+Given(/^I am logged in$/) do
+  @page = createPageObject("log in")
+  @page.visit
+  @page.type("krystian", "username field")
+  @page.type("test", "password field")
+  @page.click("log in button")
 end
