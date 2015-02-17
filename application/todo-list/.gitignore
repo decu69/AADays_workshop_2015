@@ -17,3 +17,6 @@
 
 # Ignore all lock files.
 *.lock
+
+# Ignore
+/.idea/

@@ -3,21 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>
-      Quality Excites 2014 - Śladami faraonów, czyli pragmatyczna podróż po piramidzie testów
+      Agile QA - Pragmatyczne zapewnianie jakości
     </title>
 
-    <meta name="description"
-          content="Prezentacja o testach i pragmatycznym podejściu do tego zagadnienia." />
-
     <meta name="author"
-          content="Korneliusz Caputa, Wojciech Gawroński, Kamila Kupidura" />
-
+          content="Korneliusz Caputa, Wojciech Gawroński, Kamila Kupidura, Daniel Dec, Tomasz Wierzchowski" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab|Roboto&amp;subset=latin,latin-ext"
+    <link href="//fonts.googleapis.com/css?family=Roboto+Slab|Roboto&amp;subset=latin,latin-ext"
           rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="css/reveal.css" />
@@ -211,207 +207,18 @@
   <body>
     <div class="reveal">
       <div class="slides">
-
-        <section>
-          <h1>Śladami faraonów</h1>
-          <h3>Pragmatyczna podróż<br/>po piramidzie testów</h3>
+        <section id="intro">
+          <h2>Automatyzacja w oparciu o dobrą komunikację z klientem</h2>
+          <h4>2015</h4>
           <span class="license">
-            Quality Excites - 2014 &copy; License:
+            License:
             <a href="http://creativecommons.org/licenses/by-nd/3.0/pl/">CC BY-ND 3.0 PL</a>
           </span>
-
-          <aside class="notes">
-            <ul>
-              <li class="speaker">KAMILA</li>
-              <li><time>2 minuty</time></li>
-              <li>
-                Witamy państwa na prezentacji poświęconej piramidzie testów. Ja nazywam się Kamila Kupidura i Razem z kolegami przygotowaliśmy warsztat, podczas którego zaprezentujemy od strony teoretycznej i praktycznej poszczególne poziomy i typy testów.
-              </li>
-              <li>
-                Możecie śmiało zadawać pytania w trakcie prezentacji.
-              </li>
-              <li>
-                Prosimy o wypełnienie ankiet w trakcie szkolenia. Na końcu je zbierzemy, bardzo liczymy na Wasz feedback.
-              </li>
-              <li>
-                Przejdziemy krok po kroku procesem tworzenia oprogramowania, podczas każdego przystanku zapoznamy się z odpowiadającym mu elementem w piramidzie. Dzięki temu skupimy się też, na praktycznej stronie tworzenia testów.
-              </li>
-              <li>
-                Bardzo mocno będziemy wykorzystywać Ruby jako język programowania i narzędzia związane z tą społecznością.
-              </li>
-              <li>
-                Runda - Imię, Nazwisko, Stanowisko, Znajomość Ruby (TAK/NIE).
-              </li>
-            </ul>
-          </aside>
         </section>
 
-        <section>
-
-          <section class="theory">
-            <h2>Testy oprogramowania</h2>
-
-            <h3>Kto? Co? Jak?</h3>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KAMILA</li>
-                <li><time>1 minuta</time></li>
-                <li>
-                  Testowanie oprogramowania – proces związany z wytwarzaniem oprogramowania. Jest to jeden z procesów zapewnienia jakości oprogramowania. Testowanie ma na celu weryfikację oraz walidację oprogramowania.
-                </li>
-                <li>
-                  <strong>Walidacja</strong> to sprawdzenie czy produkt spełnia wymagania.
-                </li>
-                <li>
-                  <strong>Weryfikacja</strong> to sprawdzenie czy wyniki aktualnego etapu spełniają założenia przyjęte na początku analizowanej fazy projektu.
-                </li>
-                <li>
-                  <strong>Norma:</strong> IEEE-STD-610
-                </li>
-              </ul>
-            </aside>
-          </section>
-
-          <section class="theory">
-            <h1>Tester?</h1>
-
-            <img class="left space-right" src="img/Monkey.jpg" alt="Tester małpa ;)" />
-            <img height="295" width="369" class="right" src="img/Dobromir.jpg" alt="Tester pomysłowy ;)" />
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KAMILA</li>
-                <li><time>1 minuta</time></li>
-              </ul>
-            </aside>
-          </section>
-
-          <section class="theory">
-            <h1>Waterfall</h1>
-
-            <img class="huge" src="img/Waterfall.png" alt="Waterfall" />
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KAMILA</li>
-                <li><time>2 minuty</time></li>
-                <li>
-                  Testowanie to przed ostatnia faza w modelu kaskadowym.
-                </li>
-                <li>
-                  Na testera w jednym momencie spada praca z poprzednich 4 bloków.
-                </li>
-              </ul>
-            </aside>
-          </section>
-
-          <section class="theory">
-            <h1>Agile</h1>
-
-            <img class="big" src="img/Agile.jpg" alt="Agile" />
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KAMILA</li>
-                <li><time>2 minuty</time></li>
-              </ul>
-            </aside>
-          </section>
+        <section id="user_story">
 
           <section>
-            <h2>Agile <small>vs</small> Waterfall</h2>
-            <ul>
-              <li>Łatwość wprowadzania zmian</li>
-              <li>Szybka adaptacja</li>
-              <li>Większa kontrola nad ryzykiem</li>
-              <li>Szybciej dostarczamy wartość</li>
-              <li>Dostarczony produkt jest bliższy oczekiwaniom</li>
-            </ul>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KAMILA</li>
-                <li><time>2 minuty</time></li>
-              </ul>
-            </aside>
-
-          </section>
-
-          <section class = "theory">
-            <h1>Zespół Agile</h1>
-
-            <img class="huge" src="img/AgileTeam.jpg" alt="Zespół Agile" />
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KAMILA</li>
-                <li><time>2 minuty</time></li>
-                <li>
-                  Product Owner - Product Owner (Właściciel Produktu) - odpowiada za określenie wizji produktu i nadzór nad jego rozwojem. Pełni kluczową rolę w prowadzeniu projektu w metodykach tzw. zwinnych, gdzie odpowiada za określenie wymagań funkcjonalnych produktu oraz określa priorytety ich tworzenia. Na bieżąco współpracuje z zespołem developerskim (programistami, grafikami, specjalistami od interfejsu graficznego (UX), itd.) w realizacji kolejnych wersji produktu.
-                </li>
-              </ul>
-            </aside>
-          </section>
-
-          <section>
-            <h2>Rola i oczekiwania wobec testera</h2>
-
-            <ul>
-              <li>Każdy dba o jakość</li>
-              <li>Testowanie jest ciągłe</li>
-              <li>Testowanie nie wstrzymuje dostarczenia produktu</li>
-              <li>Tester jest odpowiedzialny za zgłaszanie feedbacku</li>
-              <li>Testy opisują oczekiwania i wymagania</li>
-              <li>Brak czasu na ręczne testy regresji</li>
-            </ul>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KAMILA</li>
-                <li><time>2 minuty</time></li>
-              </ul>
-            </aside>
-          </section>
-
-        </section>
-
-        <section>
-
-          <section class="theory">
-            <h2>Kiedy zacząć testowanie?</h2>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KAMILA</li>
-                <li><time>0 minut</time></li>
-              </ul>
-            </aside>
-
-          </section>
-
-          <section class="theory">
-            <h2><em>Jak najwcześniej...</em></h2>
-
-            <div>
-              <h3>Tylko co testować?</h3>
-
-              <img src="img/Monkey.jpg" alt="Tester Małpa ;)" />
-            </div>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KAMILA</li>
-                <li><time>1 minuty</time></li>
-              </ul>
-            </aside>
-          </section>
-
-        </section>
-
-        <section>
-
-          <section class="theory">
             <h2><em>Pracujemy w Agile</em></h2>
             <h3>Pracujemy z klientem</h3>
 
@@ -419,6 +226,7 @@
 
             <aside class="notes">
               <ul>
+                <li>1h - wprowadzenie user story, bdd itp. - plynne przejscie do warsztatu </li>
                 <li class="speaker">KAMILA</li>
                 <li><time>2 minuty</time></li>
                 <li>
@@ -440,7 +248,7 @@
             </aside>
           </section>
 
-          <section class="theory">
+          <section>
             <h2><em>UCD &amp; Agile</em></h2>
 
             <img src="img/AgileUCDPhases.jpg" alt="Fazy pracy nad projektem" />
@@ -505,10 +313,6 @@
             </aside>
           </section>
 
-        </section>
-
-        <section>
-
           <section>
             <h2><em>User Story</em></h2>
 
@@ -550,10 +354,6 @@
             </aside>
           </section>
 
-        </section>
-
-        <section>
-
           <section>
             <h2>Wymagania <small>vs</small> <em>user story</em></h2>
 
@@ -563,7 +363,23 @@
               <li>Produkt powinien opiekać z góry i z dołu</li>
             </ul>
 
-            <img class="fragment" src="img/Oven.jpg" alt="Piekarnik" />
+            <aside class="notes">
+              <p>
+                Czy macie wymagania?
+                W jakiej postaci?
+                Jak doprecyzowujecie
+                Jak testujecie?
+
+                User stories should only provide enough detail to make a reasonably low risk estimate of how long the story will take to implement. When the time comes to implement the story developers will go to the customer and receive a detailed description of the requirements face to face.
+
+                User Stories are a simple way of capturing user requirements throughout a project – an alternative to writing lengthy requirements specifications all up-front. - See more at: http://www.allaboutagile.com/writing-good-user-stories/#sthash.I602RIg2.dpuf
+              </p>
+            </aside>
+          </section>
+
+          <section>
+            <h3>Czy to jest to czego klient chciał?</h3>
+            <img src="img/Oven.jpg" alt="Piekarnik" />
 
             <aside class="notes">
               <ul>
@@ -580,36 +396,106 @@
           </section>
 
           <section>
-            <h2>Wymagania <small>vs</small> <em>user story</em></h2>
-
-            <p>
-              <strong>Jako</strong> Kamila,<br/>
-              <strong>Chcę</strong> zjeść tosta z serem w środku,<br/>
-              <strong>Żeby</strong> zaspokoić głód
-            </p>
-
-            <img class="fragment" src="img/Toaster.jpg" alt="Toster" />
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KAMILA</li>
-                <li><time>2 minuty</time></li>
-                <li>
-                  Jeśli spojrzymy na to z innej strony, opisując moje wymagania za pomocą historyjki użytkownika, widzimy, że chodziło mi o coś zupełnie innego.
-                </li>
-                <li>
-                  Ten problem rozwiązywany jest przez odpowiednio długi i żmudny proces zbierania wymagań, poparty doświadczeniem. US może dość mocno wpłynąć na jakość zbieranych wymagań i wiedzy na temat produktu, oraz pozwoli przyspieszyć cały proces.
-                </li>
-              </ul>
-            </aside>
-
+            <q>Don’t try to tell the customer what he wants. <br>
+            If you want to be smart, be smart in the shower.<br>
+            Then get out, go to work and serve the customer!</q>
+            <small>Gene Buckley, President Sikorsky Aircraft</small>
           </section>
 
-        </section>
+      <section>
+        <h2>Popełniliśmy typowe błędy!</h2>
+        <ul>
+        <li>Technikalia</li>
+        <li>Produkt zamiast doświadczeń użytkownika</li>
+        <li>Parametry i cechy zamiast zachowań</li>
+        <li>Sugerowanie rozwiązania</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>User story</h2>
+        <h3>charakterystyka</h3>
+        <ul>
+          <li>Independent</li>
+          <li>Negotiable</li>
+          <li>Valuable</li>
+          <li>Estimatable</li>
+          <li>Small</li>
+          <li>Testable</li>
+        </ul>
+        <aside class="notes">
+          <p>
+            Independent. Reduced dependencies  = easier to plan = We want to be able to develop in any sequence.
+            Negotiable. Details added via collaboration
+            Valuable. Provides value to the customer
+            Estimable. Too big or too vague = not estimable
+            Small. Can be done in less than a week by the team
+            Testable. Good acceptance criteria
+          </p>
+          <p>
+            INVEST
+            Independent
+              logging and transaction feature could be separated
+            Negotiable
+              Not to much details
+              Works as reminder
+              Details in acceptance criteria examples
+            Valuable
+              For bussines not for dev/QA
+            Estimable
+            Small
+              To put into interation
+            Testable
+          Small
+            To put into interation
+          Testable
+          </p>
+          <p>
+            Negotiable… and Negotiated
+            A good story is negotiable. It is not an explicit contract for features; rather, details will be co-created by the customer and programmer during development. A good story captures the essence, not the details. Over time, the card may acquire notes, test ideas, and so on, but we don't need these to prioritize or schedule stories
+          </p>
+          <p>
+            Testable
+            A good story is testable. Writing a story card carries an implicit promise: "I understand what I want well enough that I could write a test for it." Several teams have reported that by requiring customer tests before implementing a story, the team is more productive. "Testability" has always been a characteristic of good requirements; actually writing the tests early helps us know whether this goal is met.
+            If a customer doesn't know how to test something, this may indicate that the story isn't clear enough, or that it doesn't reflect something valuable to them, or that the customer just needs help in testing.
+            A team can treat non-functional requirements (such as performance and usability) as things that need to be tested. Figure out how to operationalize these tests will help the team learn the true needs.
+          </p>
+        </aside>
+      </section>
+
+
+
+      <section>
+        <h2>Wymagania <small>vs</small> <em>user story</em></h2>
+
+        <p>
+          <strong>Jako</strong> Kamila,<br/>
+          <strong>Chcę</strong> zjeść tosta z serem w środku,<br/>
+          <strong>Żeby</strong> zaspokoić głód
+        </p>
+
+        <img class="fragment" src="img/Toaster.jpg" alt="Toster" />
+
+        <aside class="notes">
+          <ul>
+            <li class="speaker">KAMILA</li>
+            <li><time>2 minuty</time></li>
+            <li>
+              Jeśli spojrzymy na to z innej strony, opisując moje wymagania za pomocą historyjki użytkownika, widzimy, że chodziło mi o coś zupełnie innego.
+            </li>
+            <li>
+              Ten problem rozwiązywany jest przez odpowiednio długi i żmudny proces zbierania wymagań, poparty doświadczeniem. US może dość mocno wpłynąć na jakość zbieranych wymagań i wiedzy na temat produktu, oraz pozwoli przyspieszyć cały proces.
+            </li>
+          </ul>
+        </aside>
+
+      </section>
+
+    </section>
 
         <section>
 
-          <section class="theory">
+          <section>
             <h1>Persona</h1>
             <h3>Krystian Kocur</h3>
 
@@ -623,7 +509,7 @@
             </aside>
           </section>
 
-          <section class="theory">
+          <section>
             <img src="img/Krystian.png" class="stick" width="150" height="170" alt="Klient" />
 
             <ul class="no-bullets text_width">
@@ -653,7 +539,7 @@
             </aside>
           </section>
 
-          <section class="theory">
+          <section>
             <img src="img/Krystian.png" class="stick lower" width="150" height="170" alt="Klient" />
 
             <ul class="no-bullets text_width">
@@ -786,12 +672,12 @@
 
           <section class="solution">
             <h2>Zadanie 2</h2>
-            <h3>Lista zamknięta jest niedostępna dla użytkownika</h3>
+            <h3>Lista jest zamknięta kiedy wszystkie jej elementy są zrobione</h3>
 
             <p class="fragment nicer-container">
-              <strong>Jako</strong> Krystian,<br>
-              <strong>Chcę</strong> aby moje zamknięte listy nie były widoczne,<br>
-              <strong>Żeby</strong> nie wprowadzały mnie w błąd
+              <strong>Jako</strong> Krystian,<br/>
+              <strong>Chcę</strong> zamknąć wszystkie elementy znajdujące się na liście,<br/>
+              <strong>Żeby</strong> lista została automatycznie zamknięta i nie wprowadzała mnie w błąd
             </p>
 
             <time id="us-2" class="countdown">
@@ -821,12 +707,12 @@
 
           <section class="solution">
             <h2>Zadanie 3</h2>
-            <h3>Lista jest zamknięta kiedy wszystkie jej elementy są zrobione</h3>
+            <h3>Lista zamknięta jest niedostępna dla użytkownika</h3>
 
             <p class="fragment nicer-container">
-              <strong>Jako</strong> Krystian,<br/>
-              <strong>Chcę</strong> zamknąć wszystkie elementy znajdujące się na liście,<br/>
-              <strong>Żeby</strong> lista została automatycznie zamknięta i nie wprowadzała mnie w błąd
+              <strong>Jako</strong> Krystian,<br>
+              <strong>Chcę</strong> aby moje zamknięte listy nie były widoczne,<br>
+              <strong>Żeby</strong> nie wprowadzały mnie w błąd
             </p>
 
             <time id="us-3" class="countdown">
@@ -856,7 +742,53 @@
 
         </section>
 
+
         <section>
+
+          <section>
+            <h2>Język Domenowy</h2>
+            <h3>Kto? Co? Kiedy?</h3>
+
+            <aside class="notes">
+              <ul>
+                <li class="speaker">KORNEL</li>
+                <li><time>5 minut</time></li>
+                <li>
+                  Tzw. "Ubiquitous Language" czyli wszędobylski język domenowy to jedna z form komunikacji z klientem / ekspertem domenowym. Zaprojektowana forma komunikacji powinna odzwierciedlać relacje, procesy i pojęcia znajdujące się w centrum logiki biznesowej.
+                </li>
+                <li>
+                  Powinna również opisywać je w sposób jasny i jednoznaczny. Tak przygotowany język odgrywa kluczową rolę w komunikacji, zwłaszcza gdy domena jest rozległa i rozwija się w trakcie budowania produktu. Dzięki nieustannemu rozwojowi, uzyskujemy jasną i czytelną formę komunikacji, która najprostszy i najczytelniejszy sposób komunikuje intencję oraz działania zachodzące w domenie.
+                </li>
+                <li>
+                   Rolą zespołu jest dbać o język, wyjaśniać pojęcia i dbać o ich jednoznaczność oraz dokumentować go w raz z rozwojem projektu.
+                </li>
+              </ul>
+            </aside>
+          </section>
+
+          <section>
+            <h2>Przykład</h2>
+
+            <ul>
+              <li>Zadanie zrobione / Zadanie zamknięte</li>
+              <li>Zadanie nie zrobione / Zadanie otwarte</li>
+              <li>Zamknięta lista</li>
+              <li>Otwarta lista</li>
+            </ul>
+
+            <aside class="notes">
+              <ul>
+                <li class="speaker">KORNEL</li>
+                <li><time>1 minuta</time></li>
+                <li>
+                  Ze słownika języka domenowego korzystamy przy tworzeniu scenariuszy testowych dla testów typu czarno-skrzynkowego.
+                </li>
+              </ul>
+            </aside>
+          </section>
+
+        </section>
+<section>
 
           <section class="break">
             <h1>Przerwa</h1>
@@ -886,283 +818,35 @@
           </section>
 
         </section>
-
         <section>
-
-          <section class="theory">
-            <h2>Język Domenowy</h2>
-            <h3>Kto? Co? Kiedy?</h3>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KORNEL</li>
-                <li><time>5 minut</time></li>
-                <li>
-                  Tzw. "Ubiquitous Language" czyli wszędobylski język domenowy to jedna z form komunikacji z klientem / ekspertem domenowym. Zaprojektowana forma komunikacji powinna odzwierciedlać relacje, procesy i pojęcia znajdujące się w centrum logiki biznesowej.
-                </li>
-                <li>
-                  Powinna również opisywać je w sposób jasny i jednoznaczny. Tak przygotowany język odgrywa kluczową rolę w komunikacji, zwłaszcza gdy domena jest rozległa i rozwija się w trakcie budowania produktu. Dzięki nieustannemu rozwojowi, uzyskujemy jasną i czytelną formę komunikacji, która najprostszy i najczytelniejszy sposób komunikuje intencję oraz działania zachodzące w domenie.
-                </li>
-                <li>
-                   Rolą zespołu jest dbać o język, wyjaśniać pojęcia i dbać o ich jednoznaczność oraz dokumentować go w raz z rozwojem projektu.
-                </li>
-              </ul>
-            </aside>
-          </section>
-
-          <section class="theory">
-            <h2>Przykład</h2>
-
-            <ul>
-              <li>Zadanie zrobione / Zadanie zamknięte</li>
-              <li>Zadanie nie zrobione / Zadanie otwarte</li>
-              <li>Zamknięta lista</li>
-              <li>Otwarta lista</li>
-            </ul>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KORNEL</li>
-                <li><time>1 minuta</time></li>
-                <li>
-                  Ze słownika języka domenowego korzystamy przy tworzeniu scenariuszy testowych dla testów typu czarno-skrzynkowego.
-                </li>
-              </ul>
-            </aside>
-          </section>
-
-        </section>
-
-        <section>
-
-          <section class="theory">
-            <h2>Podział testów</h2>
-
-            <ul>
-              <li>Testy czarno-skrzynkowe</li>
-              <li>Testy biało-skrzynkowe</li>
-            </ul>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KORNEL</li>
-                <li><time>5 minut</time></li>
-
-                <li>
-                  <b>Blackbox</b>
-                </li>
-                <li>
-                  Metodyka ta rozpatruje możliwe dane wejściowe dla aplikacji i weryfikuje otrzymane wyniki.
-                </li>
-                <li>
-                  Można w uproszczeniu stwierdzić, iż testy czarnoskrzynkowe odpowiadają na pytanie "Co aplikacja robi?".
-                </li>
-                <li>
-                  Nie rozpatruje się w tym przypadku technicznych aspektów realizacji poszczególnych funkcjonalności ani procesów czy transformacji danych jakie prowadzą do osiągnięcia wyznaczonego celu.
-                </li>
-                <li>
-                  Większość testów czarnoskrzynkowych opiera się na interakcjach z GUI lub API w przypadku serwisów.
-                </li>
-                <li>
-                  Przykładem testu czarnoskrzynkowego może być test end to end funkcjonalności aplikacji, która polega na przesłaniu wiadomości od jednego użytkownika do drugiego.
-                </li>
-
-                <li>
-                  <b>Whitebox</b>
-                </li>
-                <li>
-                  Metodyka ta zwraca uwagę na wszelkie szczegóły techniczne związane z procesem prowadzącym do osiągnięcia założonych wyników.
-                </li>
-                <li>
-                  W uproszczeniu można stwierdzić, iż testy białoskrzynkowe odpowiadają na pytanie "Jak aplikacja realizuje swoje funkcjonalności?".
-                </li>
-                <li>
-                  Pisanie tego typu testów otwiera umożliwia  , ponieważ znajdują się w strefie udostępniającej pełne spektrum technicznych szczegółów.
-                </li>
-                <li>
-                  Przykładem testów białoskrzynkowych mogą być testy jednostkowe w dialekcie TDD lub BDD.
-                </li>
-              </ul>
-            </aside>
-          </section>
-
-          <section class="theory">
-            <h2>Black Box Testing</h2>
-
-            <img src="img/BlackBox.jpg" width="350" alt="White Box" />
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KORNEL</li>
-                <li><time>2 minuty</time></li>
-                <li>
-                  Testy czarno-skrzynkowe są łatwe w użyciu i czytelne. Można na ich podstawie w bardzo prosty sposób stwierdzić czy aplikacja spełnia swoje zadanie. W tym kontekście nasuwa się wniosek, iż dobrze napisane testy czarno-skrzynkowe przez swoją czytelność stanowić mogą ważny element raportów na temat postępów prac dla interesariuszy biznesowych.
-                </li>
-                <li>
-                  Dzięki prostocie pomysłu testowania 'od zewnątrz', QA są w stanie w relatywnie krótkim czasie stworzyć zautomatyzowaną sieć wysokopoziomowych testów (GUI, e2e) skutecznie strzegących przed regresjami.
-                </li>
-                <li>
-                  Należy jednak pamiętać, iż zewnętrzne warstwy aplikacji są najczęściej poddawane zmianom, na które testy czarno-skrzynkowe są niezwykle wrażliwe.
-                </li>
-                <li>
-                  Wiąże się to z ich kruchością i potrzebą utrzymywania i przede wszystkim dostosowywania do wszelkich zmian formatu danych wejściowych lub sposobu ich wprowadzania.
-                </li>
-              </ul>
-            </aside>
-          </section>
 
           <section>
-            <h2>BBT - przykład</h2>
-
-            <p class="nicer-container">
-              Test funkcjonalności (<code>end to end</code>):<br/>
-              <em>przesłanie wiadomości od jednego użytkownika do drugiego.</em>
-            </p>
-
-            <ul class="nicer-container">
-              <li>Loguję się jako użytkownik X.</li>
-              <li>Naciskam przycisk <em>wyślij wiadomość</em>.</li>
-              <li>Wybieram z menu rozwijanego użytkownika Y.</li>
-              <li>Wpisuję treść wiadomości.</li>
-              <li>Naciskam przycisk <em>wyślij</em>.</li>
-              <li>Wylogowuję się.</li>
-              <li>Loguję się jako użytkownik Y.</li>
-              <li>Naciskam na przycisk <em>Nowe wiadomości</em>.</li>
-              <li>W liście powiadomień szukam wiadomości od X.</li>
-              <li>Naciskam na najnowszą wiadomość.</li>
-              <li>Wiadomość zawiera treść, którą wysłał użytkownik X.</li>
-            </ul>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KORNEL</li>
-                <li><time>2 minuty</time></li>
-              </ul>
-            </aside>
-
+            <h2>Architektura testów</h2>
+            <p>architektura wielowarstwowa</p>
+            <img class="big white-background" src="img/multi_layer_architecture.png" alt="Multi layer architecture" />
           </section>
 
-          <section class="theory">
-            <h2>White Box Testing</h2>
-
-            <img src="img/WhiteBox.jpg" alt="White Box" />
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KORNEL</li>
-                <li><time>2 minuty</time></li>
-                <li>
-                  Niezaprzeczalnie najwększymi zaletami testów białoskrzynkowych jest ich głęboki wgląd w domenę aplikacji oraz gruntowność w pokryciu przypadków brzegowych. Dodatkowym plusem jest ich stabilność, która stanowi odzwierciedlenie stabilności kodu domenowego aplikacji.
-                </li>
-                <li>
-                  Dokładność i informatywność testów białoskrzynkowych czyni je idealnym źródłem wiedzy dla developerów.
-                </li>
-                <li>
-                  Jeżeli team developerski przejmuje od kogoś projekt, zyskuje dużą dawkę pewności i swobody w jego rozwoju jeżeli ma do dyspozycji solidną sieć testów białoskrzynkoych.
-                </li>
-                <li>
-                  Oznacza to dla nich skrócony czas wdrażania się w technikalia oraz zapewnienie, że zostaną poinformowani gdy ich zmiany naruszą utrzymanie niezmienników kluczowych dla domeny systemu.
-                </li>
-                <li>
-                  Testy 'od wewnątrz' oczywiście również wymagają utrzymywania - zmiany staja się potrzebne w przypadku modyfikacji zachowań związanych z logiką biznesową.
-                </li>
-                <li>
-                  Dodatkową ich wadą jest bardzo ścisłe powiązanie z testowanym kodem, niezbędne do osiągnięcia pełnego potencjału wglądu w jego domenę. Wiąże się to z potrzebą postawienia całej aplikacji na odpowiedniej platformie, wraz ze wszystkimi niezbędnymi narzędziami po to by móc uruchomić przygotowany dla niej zestaw testów białoskrzynkowych.
-                </li>
-              </ul>
-            </aside>
-          </section>
-
-          <section>
-            <h2>WBT - przykład</h2>
-            <ul>
-              <li>Istnieją obiekty <em>acc1</em> i <em>acc2</em> typu <em>BankAccount</em>.</li>
-              <li>Inicjalizuję obiekt <em>acc1 = BankAccount.withBalance(200)</em>.</li>
-              <li>Inicjalizuję obiekt <em>acc2 = BankAccount.withBalance(10)</em>.</li>
-              <li>Dokonuję wywołania <em>acc1.transfer(acc2, 50)</em>.</li>
-              <li>Oczekuję, iż <em>acc2.balance() == 60</em>.</li>
-              <li>Oczekuję, iż <em>acc1.balance() == 150</em>.</li>
-            </ul>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KORNEL</li>
-                <li><time>2 minuty</time></li>
-                <li>
-                  Mówimy o testach od wewnątrz/zewnątrz, przez co możemy wysnuć analogię (piramida) - patrzenie z góry, od dołu.
-                </li>
-              </ul>
-            </aside>
-          </section>
-
-        </section>
-
-        <section>
-
-          <section class="theory" data-pyramid="true">
+          <section data-pyramid="true">
             <h2>Piramida testów</h2>
 
             <div class="svg-placeholder"></div>
 
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KORNEL</li>
-                <li><time>5 minut</time></li>
-                <li>
-                  Autorem tego pojęcia jest Mike Cohn, opisał on go w książce "Succeeding with Agile".
-                </li>
-                <li>
-                  Jest to rodzaj wizualnej reprezentacji rozmiaru i ilości testów, w zależności od ich stopnia skomplikowania, wyrażonego za pomocą poziomo piramidy (im wyżej, tym większy stopień skomplikowania i mniejsza możliwość manewru).
-                </li>
-                <li>
-                  Im testy bardziej skomplikowane i włączające więcej warstw, tym mniej ich powinno być (koszt utrzymania przeważa nad zyskiem z ich automatyzacji).
-                </li>
-                <li>
-                  Wiele scenariuszy testowych obarczonych jest problemem "skomplikowania przez GUI."
-                </li>
-                <li>
-                  Prezentacja palcem - konsekwencje prób testowania niskich warstw piramidy testami wysokopoziomowymi. Trzeba przebić się przez wszystkie warstwy pośrednie, z których każda wprowadza komplikacje.
-                </li>
-                <li>
-                  Warto pamiętać również o tym, że na im wyższym poziomie wykonany zostanie test, tym więcej przypadków i zestawów danych należy przygotować (multiplikacja przypadków testowych).
-                </li>
-              </ul>
-            </aside>
           </section>
 
           <section>
-            <q>
-              So, you see, while Agile does promote people and interactions over tools, it doesn't suggest that tools should be eliminated.
-            </q>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KORNEL</li>
-                <li><time>1 minuta</time></li>
-                <li>Autor cytatu - Steve Gibson (LinkedIn - QA in Agile World group).</li>
-              </ul>
-            </aside>
+            <h2> Odwrotna piramida </h2>
+            <img class="big white-background" src="img/odwrotna_piramida.png" alt="Odwrócona piramida" />
           </section>
 
           <section>
-            <q>
-              The right tools in the right hands make us stronger - much like how apes learned to use twigs to ferret out termites from their nests, we must also learn to wield tools to ferret out bugs from our nests of code.
-            </q>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KORNEL</li>
-                <li><time>1 minuta</time></li>
-                <li>Autor cytatu - Steve Gibson (LinkedIn - QA in Agile World group).</li>
-              </ul>
-            </aside>
+            <img class="white-background" src="img/mvc.png" alt="Model MVC" />
+            <img class="white-background" src="img/mvc_testy.png" alt="Model MVC - testy" />
           </section>
 
         </section>
 
         <section>
-
-          <section class="theory" data-pyramid="true" data-pyramid-active="2">
+          <section data-pyramid="true" data-pyramid-active="2">
             <h2>Acceptance tests</h2>
 
             <div class="svg-placeholder"></div>
@@ -1227,21 +911,20 @@
             </aside>
           </section>
 
+      <section>
+        <h2>Cykl ATDD</h2>
+        <img src="img/ATDD.png" alt="Cykl ATDD" />
+      </section>
+
         </section>
 
         <section>
 
-          <section class="theory" data-pyramid="true" data-pyramid-active="3">
+          <section data-pyramid="true" data-pyramid-active="3">
             <h2>BDD</h2>
 
             <div class="svg-placeholder"></div>
 
-            <aside class="notes">
-              <ul>
-                <li class="speaker">WOJTEK</li>
-                <li><time>1 minuta</time></li>
-              </ul>
-            </aside>
           </section>
 
           <section>
@@ -1371,6 +1054,11 @@ THEN ... weryfikacja</code></pre>
             </aside>
           </section>
 
+          <section>
+            <h2>Cykl BDD</h2>
+            <img src="img/BDD.png" alt="Cykl BDD" />
+          </section>
+
           <section class="assignment">
             <h1>Zadanie</h1>
 
@@ -1432,7 +1120,7 @@ THEN ... weryfikacja</code></pre>
 
         <section>
 
-          <section class="theory" data-pyramid="true" data-pyramid-active="4">
+          <section data-pyramid="true" data-pyramid-active="4">
             <h2>Unit tests</h2>
             <h3><i>Testy jednostkowe</i></h3>
 
@@ -1497,7 +1185,7 @@ THEN ... weryfikacja</code></pre>
           <section>
             <h2>TDD</h2>
 
-            <img class="big white-background" src="img/TDD.png" alt="TDD Cycle" />
+            <img class="medium white-background" src="img/TDD.png" alt="TDD Cycle" />
 
             <aside class="notes">
               <ul>
@@ -1564,9 +1252,8 @@ THEN ... weryfikacja</code></pre>
 
         <section>
 
-          <section class="theory" data-pyramid="true" data-pyramid-active="0">
+          <section data-pyramid="true" data-pyramid-active="0">
             <h2>Automated GUI tests</h2>
-            <h3><i>Testy automatyczne GUI</i></h3>
 
             <div class="svg-placeholder"></div>
 
@@ -1580,12 +1267,11 @@ THEN ... weryfikacja</code></pre>
 
           <section>
             <h2>Automated GUI tests</h2>
-            <h3><i>Testy automatyczne GUI</i></h3>
 
             <ul>
               <li>Zautomatyzowane scenariusze testowe.</li>
               <li>Nie za dobry stosunek: <strong><sup>KOSZT</sup> / <sub>ZYSK</sub></strong></li>
-              <li>Głównie testy eksploracyjne.</li>
+            <!-- <li>Głównie testy eksploracyjne.</li> WTF?-->
             </ul>
 
             <aside class="notes">
@@ -1605,7 +1291,7 @@ THEN ... weryfikacja</code></pre>
           <section>
             <h2>GUI - Test Runner</h2>
 
-            <img class="big" src="img/Selenium.png" alt="Selenium" />
+            <img class="big" src="img/PageObjectDiagram.png" alt="Selenium" />
 
             <aside class="notes">
               <ul>
@@ -1625,7 +1311,7 @@ THEN ... weryfikacja</code></pre>
             <h2>GUI - Page Object</h2>
 
             <img class="white-background"
-                 src="img/PageObject.png" alt="Hierarchia dziedziczenia dla wzorca PageObject" />
+                 src="img/Page_Object.jpg" alt="Hierarchia dziedziczenia dla wzorca PageObject" />
 
             <ul>
               <li>Odzwierciedlenie strony w kodzie</li>
@@ -1672,7 +1358,6 @@ THEN ... weryfikacja</code></pre>
                 <ul>
                   <li><code>/div/label/input</code></li>
                   <li><code>/*[contains(text(), 'Opcja')]</code></li>
-                  <li><code>/div/..</code></li>
                   <li><code>/div/preceding-sibling::input</code></li>
                 </ul>
               </li>
@@ -1792,30 +1477,6 @@ THEN ... weryfikacja</code></pre>
             </aside>
           </section>
 
-          <section>
-            <h2>Utrzymanie testów</h2>
-
-            <ul>
-              <li>Testy czarno-skrzynkowe się łatwo pisze ...</li>
-              <li><em>... i ciężko utrzymuje.</em></li>
-              <li>Testy biało-skrzynkowe pisze się gorzej ...</li>
-              <li><em>... i jeśli są źle napisane, utrzymuje się je równie źle.</em></li>
-            </ul>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">WOJTEK</li>
-                <li><time>2 minuty</time></li>
-                <li>
-                  Testy to również kod produkcyjny - musimy o nie dbać.
-                </li>
-                <li>
-                  Regularne CR, Wzorce projektowe, Refactoring, Dbałość o szczegóły i spójność.
-                </li>
-              </ul>
-            </aside>
-          </section>
-
         </section>
 
         <section>
@@ -1839,14 +1500,15 @@ THEN ... weryfikacja</code></pre>
               <li>
                 <a href="http://www.amazon.com/Succeeding-Agile-Software-Development-Using/dp/0321579364">
                   Succeeding with Agile
+                </a>,
+                <a href="http://www.amazon.com/User-Stories-Applied-Software-Development/dp/0321205685">
+                  User Stories Applied
                 </a>
               </li>
               <li>
                 <a href="http://docs.seleniumhq.org">
                   Selenium
-                </a>
-              </li>
-              <li>
+                </a>,
                 <a href="http://www.fitnesse.org">
                   Fitnesse
                 </a>
@@ -1854,69 +1516,15 @@ THEN ... weryfikacja</code></pre>
               <li>
                 <a href="http://cukes.info">
                   Cucumber
-                </a>
-              </li>
-              <li>
+                </a>,
                 <a href="http://jnicklas.github.io/capybara">
                   Capybara
-                </a>
-              </li>
-              <li>
+                </a>,
                 <a href="http://rspec.info">
                   RSpec
                 </a>
               </li>
             </ul>
-
-            <article class="nicer-container">
-              <h4><em>Zdjęcia: </em></h4>
-
-              <ul class="links">
-                <li>
-                  <a href="http://media-cache-ak0.pinimg.com/736x/df/3d/c9/df3dc94ebd8c1c424a1b4297b8881b2e.jpg">
-                    ScrumBay
-                  </a>,
-                  <a href="http://analizait.pl/wp-content/uploads/2012/08/modelKaskadowy.png">
-                    Waterfall
-                  </a>,
-                  <a href="http://manojjaggavarapu.files.wordpress.com/2012/07/redgreenrefacor.png">
-                    TDD Cycle
-                  </a>
-                </li>
-                <li>
-                  <a href="http://www.fitnesse.org">Fitnesse</a>, <a href="http://docs.seleniumhq.org">Selenium</a>
-                </li>
-                <li>
-                  <a href="http://4.bp.blogspot.com/_5q3g5rw4GBI/TFA1MnCDkZI/AAAAAAAAAAM/2IHEbv_YUHk/s1600/whitebox.jpg">White box</a>,
-                  <a href="http://johnkoessler.files.wordpress.com/2014/04/blackbox2.jpg">Black box</a>
-                </li>
-                <li>
-                  <a href="http://www.romanpichler.com/wp-content/uploads/2011/10/CustomerProxyPorductOwner.jpg">
-                    Agile Team
-                  </a>,
-                  <a href="http://butlerhouse.net/wp-content/uploads/2011/11/fishermans-agile-ux.jpg">
-                    Agile + UCD
-                  </a>,
-                  <a href="http://johnnyholland.org/wp-content/uploads/flow.jpg">
-                    Agile + UCD - Phases
-                  </a>
-                </li>
-                <li>
-                  <a href="http://www.suresystems.ca/wp-content/uploads/2014/01/iStock_000009905028Large.jpg">
-                    Małpa
-                  </a>,
-                  <a href="http://blogi.polskatimes.pl/zyskiistraty/wp-content/uploads/sites/22/2014/04/Dobromir2.jpg">
-                    Pomysłowy Dobromir
-                  </a>,
-                  <a href="http://www.pasaz.v10.pl/img/thumbs/p/93/b8/93b8a0c3a3a92c77e892b2427ae1fb33.jpg">
-                    Piekarnik
-                  </a>,
-                  <a href="http://ek.ua/jpg_zoom1/133466.jpg">
-                    Toster
-                  </a>
-                </li>
-              </ul>
-            </article>
           </section>
 
         </section>
@@ -1966,6 +1574,12 @@ THEN ... weryfikacja</code></pre>
         transition: "slide",
         transitionSpeed: "fast",
         backgroundTransition: "linear",
+
+        // key bindings for right/left arrow (for remote presenter)
+        //keyboard: {
+        //  39: 'next',
+        //  37: 'prev'
+        //},
 
         dependencies: [
           {

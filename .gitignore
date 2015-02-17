@@ -8,3 +8,4 @@ presentation/node_modules/
 *.log
 *~
 *.bak
+.vagrant/

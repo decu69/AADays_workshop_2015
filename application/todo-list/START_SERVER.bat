@@ -1,4 +1,4 @@
 echo off
-echo "Otworz przegladarke na stronie: http://localhost:12345/ ..."
-
+echo "Serwer wstaje..."
 bundle exec rails server -p 12345
+echo "Otworz przegladarke na stronie: http://localhost:12345/ ..."
