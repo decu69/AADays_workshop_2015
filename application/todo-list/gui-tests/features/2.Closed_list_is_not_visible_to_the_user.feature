@@ -3,6 +3,8 @@ Feature: Closed lists are not visible to the user
   I want to display my TODO lists
   In order to see only my active lists
 
+
+  @test_gui_2
   Scenario: Closing list
     Given I am on lists page
     And I typed "My new list" into new list field
