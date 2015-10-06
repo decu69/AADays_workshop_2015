@@ -1,5 +1,5 @@
 class Task < ActiveRecord::Base
-  validates :title, presence: true, uniqueness: true
+  validates :title, presence: true
 
   belongs_to :list
 
@@ -14,5 +14,9 @@ class Task < ActiveRecord::Base
 
   def close!()
     self.closed = true
+  end
+
+  def open!()
+    self.closed = false
   end
 end
