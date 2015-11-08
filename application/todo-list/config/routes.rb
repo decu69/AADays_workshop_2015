@@ -8,7 +8,7 @@ TodoList::Application.routes.draw do
   put 'lists/new/:name', to: 'lists#new_list'
 
   delete 'lists/:id/tasks/:taskId', to: 'list#delete_task'
-  put 'lists/:id/tasks/new/:title', to: 'list#new_task'
+  put 'lists/:id/tasks/new/:title/:quantity', to: 'list#new_task'
 
   post 'lists/:id/tasks/:taskId/toggle', to: "list#toggle_task"
   post 'lists/:id/reopen', to: "list#reopen_list"

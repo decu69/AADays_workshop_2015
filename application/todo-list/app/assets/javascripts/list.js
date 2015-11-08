@@ -88,6 +88,8 @@
     $("#add-new-task").on("click", function(event) {
         var $name = $("#new-task-title");
         var name = sanitize($name.val().trim());
+        var $quantity = $("#new-task-quantity");
+        var quantity = parseInt(sanitize($quantity.val().trim()), 10) || 1;
         var $this = $(this);
 
         $name.removeClass("invalid");
@@ -96,7 +98,7 @@
             $this.attr("disabled", true);
 
             $.ajax({
-                url: "/lists/" + $this.attr("data-list-id") + "/tasks/new/" + name,
+                url: "/lists/" + $this.attr("data-list-id") + "/tasks/new/" + name + "/" + quantity,
                 type: "PUT",
                 success: function() {
                     window.location.reload();

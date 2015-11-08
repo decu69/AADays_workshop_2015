@@ -65,6 +65,12 @@
     line-height: 1.5rem;
 }
 
+.task-list__task__info__quantity {
+    margin-left: .5rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+}
+
 input.task-state,
 .task-list__task__delete,
 .task-lists__list__delete {

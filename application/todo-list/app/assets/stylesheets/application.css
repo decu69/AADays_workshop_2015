@@ -32,10 +32,10 @@
   box-shadow: inset 1px 1px 6px 0 rgb(255,0,0), inset -1px -1px 6px 0 rgb(255,0,0);
 }
 
-html,body{
+html,
+body{
   margin:0;
   padding:0;
-  height: 100%;
 }
 
 body {
@@ -43,11 +43,12 @@ body {
   position: relative;
   -webkit-font-smoothing: antialiased;
   text-align: center;
+  background: #269E8E;
 }
 
 .app {
   color: #F0F1F1;
-  background: #4A4D4E;
+  background: #269E8E;
   min-width: 250px;
   position: relative;
 }
@@ -199,7 +200,7 @@ pre {
   }
   .main-header nav li.selected a {
     color: #373435;
-  } 
+  }
   #slide-menu-button{
     display: none;
   }
@@ -259,9 +260,9 @@ pre {
   }
 }
 
-@media screen and (min-width: 880px) {
+@media screen and (min-width: 1000px) {
   body {
-    background: #535455 !important;
+    background: #92D69D !important;
   }
 
   .app {

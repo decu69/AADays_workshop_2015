@@ -59,7 +59,7 @@ class ListController < ApplicationController
       if list.tasks.where(:title => params[:title]).first
         head :conflict
       else
-        list.tasks.build(:title => params[:title])
+        list.tasks.build(:title => params[:title], :quantity => params[:quantity])
         list.save!
         head :ok
       end
