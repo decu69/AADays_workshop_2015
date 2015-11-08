@@ -20,4 +20,6 @@ class LoginPage < BasePage
     end
   end
 
+
+
 end
