@@ -4,7 +4,7 @@ Feature: Closed lists are not visible to the user
   In order to see only my active lists
 
   @test_gui_2
-  Scenario: Closing list BDD
+  Scenario: Closing list
     Given I am logged in
     And I am on lists page
     And I add "My new list" list
