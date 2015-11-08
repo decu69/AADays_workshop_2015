@@ -1,6 +1,6 @@
 # What?
 
-Workshop for TestWarez 2015
+Workshop for AADays 2015
 
 # License
 
