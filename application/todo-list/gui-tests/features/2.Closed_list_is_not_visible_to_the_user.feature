@@ -10,7 +10,7 @@ Feature: Closed lists are not visible to the user
     And I add "Breakfast shopping list" list
     And I opened "Breakfast shopping list"
     And I add 10 "eggs" product
-    When I buy "My new task" and mark this on my list
+    When I buy "eggs" and mark this on my list
     And I go to lists page
-    #Then I should see "Lists for krystian"
+    And I should see "Lists for krystian"
     Then I should not see "Breakfast shopping list"

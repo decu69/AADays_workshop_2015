@@ -19,7 +19,6 @@ end
 When(/^I go to (.+?) page$/) do |pageName|
   @page = createPageObject(pageName)
   @page.visit
-  @page.look_for(@login_page.username)
 end
 
 #When(/^I wait until pending requests will finish$/) do

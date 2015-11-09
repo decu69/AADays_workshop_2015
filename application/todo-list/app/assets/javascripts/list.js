@@ -79,16 +79,16 @@
         event.stopImmediatePropagation();
     });
 
-    $("#new-task-title").on("keyup", function(event) {
+    $("#product_name").on("keyup", function(event) {
         if (event.keyCode === 13) {
-            $("#add-new-task").click();
+            $("#add-new-product").click();
         }
     });
 
-    $("#add-new-task").on("click", function(event) {
-        var $name = $("#new-task-title");
+    $("#add-new-product").on("click", function(event) {
+        var $name = $("#product_name");
         var name = sanitize($name.val().trim());
-        var $quantity = $("#new-task-quantity");
+        var $quantity = $("#product_quantity");
         var quantity = parseInt(sanitize($quantity.val().trim()), 10) || 1;
         var $this = $(this);
 

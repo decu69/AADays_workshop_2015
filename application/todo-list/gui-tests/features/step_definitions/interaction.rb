@@ -32,8 +32,9 @@ Given(/^I add "([^"]+)" list$/) do |name|
   @page.click("add button")
 end
 
-Given(/^I add (\d+) "([^"]+)" product$/) do |name|
-  @page.type(name, "new task field")
+Given(/^I add (\d+) "([^"]+)" product$/) do |quantity, name|
+  @page.type(name, "new product name")
+  @page.type(quantity, "product quantity")
   @page.click("add button")
 end
 

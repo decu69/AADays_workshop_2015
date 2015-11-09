@@ -14,11 +14,14 @@ class TaskListPage < BasePage
 
   def mapNameToSelector(name)
     case name
-      when 'new task field'
-        '#new-task-title'
+      when 'new product name'
+        '#product_name'
+
+      when 'product quantity'
+        '#product_quantity'
 
       when 'add button'
-        '#add-new-task'
+        '#add-new-product'
 
       else
         fail("There is no '#{name}' in the TaskListPage object mapping definition!")
