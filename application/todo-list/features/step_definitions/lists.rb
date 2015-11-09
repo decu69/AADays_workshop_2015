@@ -1,19 +1,19 @@
 # coding: utf-8
-Given(/^there is one list named "([^"]+)" with (\d+) task for "([^"]+)"$/) do |listName, tasksNumber, username|
+Given(/^there is one shopping list named "([^"]+)" with (\d+) product to buy by "([^"]+)"$/) do |listName, productNumber, username|
   user = User.where(:username => username).first
   list = List.create(:name => listName)
 
-  (0...tasksNumber.to_i).each do
-    list.tasks.build(:title => random_task_name())
+  (0...productNumber.to_i).each do
+    list.products.build(:title => random_product_name())
   end
 
   list.user = user
   list.save!
 end
 
-Given(/^there is one list named "([^"]+)" with one item named "([^"]+)"$/) do |listName, itemName|
+Given(/^there is one shopping list named "([^"]+)" with one item named "([^"]+)"$/) do |listName, itemName|
   list = List.create(:name => listName)
-  list.tasks.build(:title => itemName)
+  list.products.build(:title => itemName)
   list.save!
 end
 
@@ -22,11 +22,11 @@ Given(/^there are lists titled "([^"]+)", "([^"]+)"$/) do |firstList, secondList
   List.create!(:name => secondList)
 end
 
-Given(/^there is one list named "([^"]+)" with (\d+) random tasks?$/) do |listName, tasksNumber|
+Given(/^there is one shopping list named "([^"]+)" with (\d+) random products?$/) do |listName, tasksNumber|
   list = List.create(:name => listName)
 
   (0...tasksNumber.to_i).each do
-    list.tasks.build(:title => random_task_name())
+    list.products.build(:title => random_product_name())
   end
 
   list.save!
@@ -40,15 +40,15 @@ Given(/^"([^"]+)" should see "([^"]+)"$/) do |username, listName|
   User.where(:username => username).first.lists.where(:name => listName).count.should == 1
 end
 
-Given(/^there are no lists$/) do
+Given(/^there are no shopping lists$/) do
   List.delete_all
 end
 
-When(/^first visible task in list "([^"]+)" will be closed$/) do |listName|
+When(/^first visible product in list "([^"]+)" will be signed as bought$/) do |listName|
   list = List.where(:name => listName).first
 
-  list.tasks.first.close!
-  list.tasks.first.save!
+  list.products.first.close!
+  list.products.first.save!
 end
 
 When(/^"([^"]+)" will be opened$/) do |listName|
@@ -62,16 +62,16 @@ When(/^"([^"]+)" will be created$/) do |listName|
   List.create!(:name => listName)
 end
 
-When(/^new task with name "([^"]+)" is added to the "([^"]+)"$/) do |taskName, listName|
+When(/^new product with name "([^"]+)" is added to the "([^"]+)"$/) do |taskName, listName|
   list = List.where(:name => listName).first
 
-  task = Task.create(:title => taskName)
-  task.list = list
-  task.save!
+  product = Product.create(:title => taskName)
+  product.list = list
+  product.save!
 end
 
-Then(/^"([^"]+)" has no tasks inside$/) do |listName|
-  List.where(:name => listName).first.tasks.count.should == 0
+Then(/^"([^"]+)" has no products inside$/) do |listName|
+  List.where(:name => listName).first.products.count.should == 0
 end
 
 Then(/^"([^"]+)" should be available$/) do |listName|
@@ -86,8 +86,8 @@ Then(/^"([^"]+)" should has today's date$/) do |listName|
   List.where(:name => listName).first.date.should == Date.today
 end
 
-Then(/^"([^"]+)" has (\d+) tasks? inside$/) do |listName, tasksNumber|
-  List.where(:name => listName).first.tasks.count.should == tasksNumber.to_i
+Then(/^"([^"]+)" has (\d+) products? inside$/) do |listName, productsNumber|
+  List.where(:name => listName).first.products.count.should == productsNumber.to_i
 end
 
 Then(/^"([^"]+)" should be in repository$/) do |listName|

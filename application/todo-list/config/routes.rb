@@ -7,10 +7,10 @@ TodoList::Application.routes.draw do
   delete 'lists/:id', to: 'lists#delete_list'
   put 'lists/new/:name', to: 'lists#new_list'
 
-  delete 'lists/:id/tasks/:taskId', to: 'list#delete_task'
-  put 'lists/:id/tasks/new/:title', to: 'list#new_task'
+  delete 'lists/:id/products/:productId', to: 'list#delete_product'
+  put 'lists/:id/products/new/:title', to: 'list#new_product'
 
-  post 'lists/:id/tasks/:taskId/toggle', to: "list#toggle_task"
+  post 'lists/:id/products/:taskId/toggle', to: "list#toggle_product"
   post 'lists/:id/reopen', to: "list#reopen_list"
 
   get 'users/login'

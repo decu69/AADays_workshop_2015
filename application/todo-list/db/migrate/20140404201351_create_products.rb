@@ -1,6 +1,6 @@
-class CreateTasks < ActiveRecord::Migration
+class CreateProducts < ActiveRecord::Migration
   def change
-    create_table :tasks do |t|
+    create_table :products do |t|
       t.belongs_to :list
       t.string :title
       t.date :date

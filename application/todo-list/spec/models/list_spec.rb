@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'custom_list_helpers'
 
 describe List do
-  it { should have_many :tasks }
+  it { should have_many :products }
 end
 
 describe List do

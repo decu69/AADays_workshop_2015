@@ -24,7 +24,7 @@ class ListController < ApplicationController
     end
   end
 
-  def toggle_task
+  def toggle_product
     if checkAuthentication()
       list = List.where(:id => params[:id]).first
 
@@ -33,21 +33,21 @@ class ListController < ApplicationController
         return
       end
 
-      task = list.tasks.where(:id => params[:taskId]).first
+      product = list.products.where(:id => params[:taskId]).first
 
-      if task.closed
-        task.open!
+      if product.closed
+        product.open!
       else
-        task.close!
+        product.close!
       end
 
-      task.save!
+      product.save!
     end
 
     head :ok
   end
 
-  def new_task
+  def new_product
     if checkAuthentication()
       list = List.where(:id => params[:id]).first
 
@@ -56,10 +56,10 @@ class ListController < ApplicationController
         return
       end
 
-      if list.tasks.where(:title => params[:title]).first
+      if list.products.where(:title => params[:title]).first
         head :conflict
       else
-        list.tasks.build(:title => params[:title])
+        list.products.build(:title => params[:title])
         list.save!
         head :ok
       end
@@ -68,7 +68,7 @@ class ListController < ApplicationController
     end
   end
 
-  def delete_task
+  def delete_product
     if checkAuthentication()
       list = List.where(:id => params[:id]).first
 
@@ -77,7 +77,7 @@ class ListController < ApplicationController
         return
       end
 
-      list.tasks.where(:id => params[:taskId]).first.destroy
+      list.products.where(:id => params[:taskId]).first.destroy
       list.save!
     end
 

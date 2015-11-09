@@ -1,13 +1,13 @@
-Feature: List Management
-  In order to remind about things to do
+Feature: Shopping list management
+  In order to remind about products to buy
   As a Krystian
-  I want to create my TODO lists
+  I want to create my shopping lists
 
-  Scenario: Create new list
-    Given there are no lists
-    When "My new list" will be created
-    Then "My new list" should be available
-    And "My new list" should has today's date
+  Scenario: Create new shopping list
+    Given there are no shopping lists
+    When "Party shopping list" will be created
+    Then "Party shopping list" should be available
+    And "Party shopping list" should has today's date
 
   Scenario: Viewing lists
     Given there are lists titled "First", "Second"
@@ -15,30 +15,30 @@ Feature: List Management
     And "Second" should be available
 
   Scenario: New list is by default empty
-    Given there are no lists
+    Given there are no shopping lists
     When "My empty list" will be created
-    Then "My empty list" has no tasks inside
+    Then "My empty list" has no products inside
 
-  Scenario: Tasks can be assigned to the list
+  Scenario: Products can be placed to the list
     Given there is one empty list with name "New list"
     When "New list" will be opened
-    And new task with name "New task" is added to the "New list"
-    Then "New list" has 1 task inside
-    And "New task" item should be opened
+    And new product with name "bread" is added to the "New list"
+    Then "New list" has 1 product inside
+    And "bread" item should be opened
 
-  Scenario: List can have many tasks
-    Given there is one list named "My non-empty list" with 3 random tasks
+  Scenario: List can have many products
+    Given there is one shopping list named "My non-empty list" with 3 random products
     When "My non-empty list" will be opened
-    Then "My non-empty list" has 3 tasks inside
+    Then "My non-empty list" has 3 products inside
 
-  Scenario: List with not all closed tasks is visible
-    Given there is one list named "Open list" with 2 random tasks
+  Scenario: List with not all closed products is visible
+    Given there is one shopping list named "Open list" with 2 random products
     When "Open list" will be opened
-    And first visible task in list "Open list" will be closed
+    And first visible product in list "Open list" will be signed as bought
     Then "Open list" should be available
 
   Scenario: List with all closed tasks is invisible
-    Given there is one list named "Closed list" with 1 random task
+    Given there is one shopping list named "Closed list" with 1 random products
     When "Closed list" will be opened
-    And first visible task in list "Closed list" will be closed
+    And first visible product in list "Closed list" will be signed as bought
     Then "Closed list" should not be available

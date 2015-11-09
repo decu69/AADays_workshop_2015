@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe Task do
+describe Product do
   it { should belong_to :list }
 end

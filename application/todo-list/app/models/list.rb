@@ -1,7 +1,7 @@
 class List < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
 
-  has_many :tasks
+  has_many :products
   belongs_to :user
 
   after_initialize :update_state
@@ -15,7 +15,7 @@ class List < ActiveRecord::Base
   end
 
   def update_state()
-    self.available = self.tasks.select { |task| !task.closed }.count > 0 || self.tasks.count == 0
+    self.available = self.products.select { |product| !product.closed }.count > 0 || self.products.count == 0
 
     # All 'before_*' methods have to return true if they have to be applied.
     return true
@@ -30,9 +30,9 @@ class List < ActiveRecord::Base
   end
 
   def reopen!()
-    self.tasks.each do |task|
-      task.open!
-      task.save!
+    self.products.each do |product|
+      product.open!
+      product.save!
     end
 
     self.save!

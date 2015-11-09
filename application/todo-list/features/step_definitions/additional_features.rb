@@ -1,11 +1,11 @@
-Given(/^there is one list named "([^"]+)" with (\d+) closed random tasks?$/) do |listName, tasksNumber|
+Given(/^there is one shopping list named "([^"]+)" with (\d+) bought random products?$/) do |listName, productNumber|
   list = List.create(:name => listName)
 
-  (0...tasksNumber.to_i).each do
-    task = Task.create(:title => random_task_name())
-    task.close!
+  (0...productNumber.to_i).each do
+    product = Product.create(:title => random_product_name())
+    product.close!
 
-    list.tasks << task
+    list.products << product
   end
 
   list.save!
@@ -18,6 +18,6 @@ When(/^"([^"]+)" will be reopened$/) do |listName|
   list.save!
 end
 
-Then(/^all tasks on "([^"]+)" should be opened$/) do |listName|
-  List.where(:name => listName).first.tasks.select{ |task| task.closed }.count.should == 0
+Then(/^all products on "([^"]+)" should be not signed as bought$/) do |listName|
+  List.where(:name => listName).first.products.select{ |task| task.closed }.count.should == 0
 end
