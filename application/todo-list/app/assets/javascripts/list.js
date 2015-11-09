@@ -32,7 +32,7 @@
         $this.attr("disabled", true);
 
         $.ajax({
-            url: "/lists/" + $this.attr("data-list-id") + "/tasks/" + $this.attr("data-task-id"),
+            url: "/lists/" + $this.attr("data-list-id") + "/products/" + $this.attr("data-task-id"),
             type: "DELETE",
             success: function() {
                 window.location.reload();
@@ -59,12 +59,12 @@
             $cb.attr("disabled", "disabled");
 
             $.ajax({
-                url: "/lists/" + $cb.attr("data-list-id") + "/tasks/" + $cb.attr("data-task-id") +
+                url: "/lists/" + $cb.attr("data-list-id") + "/products/" + $cb.attr("data-task-id") +
                     "/toggle",
                 type: "POST",
                 success: function() {
                     $cb.prop("checked", !originalChecked);
-                    $this.text((originalChecked ? "Todo" : "Done"));
+                    $this.text((originalChecked ? "Buy" : "Bought"));
                     taskContainer.toggleClass("task-list__task--done");
                     $cb.removeAttr("disabled");
                 },
@@ -98,7 +98,7 @@
             $this.attr("disabled", true);
 
             $.ajax({
-                url: "/lists/" + $this.attr("data-list-id") + "/tasks/new/" + name + "/" + quantity,
+                url: "/lists/" + $this.attr("data-list-id") + "/products/new/" + name + "/" + quantity,
                 type: "PUT",
                 success: function() {
                     window.location.reload();

@@ -32,11 +32,12 @@ Given(/^I add "([^"]+)" list$/) do |name|
   @page.click("add button")
 end
 
-Given(/^I add "([^"]+)" task$/) do |name|
+Given(/^I add (\d+) "([^"]+)" product$/) do |name|
   @page.type(name, "new task field")
   @page.click("add button")
 end
 
-When(/^I mark "([^"]+)" task as done$/) do |name|
+When(/^I buy "([^"]+)" and mark this on my list$/) do |name|
   @page.checkNear(name)
+  @page.waitForPendingRequests(@page.getSession())
 end

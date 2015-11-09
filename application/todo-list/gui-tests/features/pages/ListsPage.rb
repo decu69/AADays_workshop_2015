@@ -1,4 +1,5 @@
 class ListsPage < BasePage
+  @verifier =
 
   def initialize(session)
     super(session)

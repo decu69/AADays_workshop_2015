@@ -7,11 +7,10 @@ Feature: Closed lists are not visible to the user
   Scenario: Closing list
     Given I am logged in
     And I am on lists page
-    And I add "My new list" list
-    And I opened "My new list"
-    And I add "My new task" task
-    When I mark "My new task" task as done
-    And I wait until pending requests will finish
+    And I add "Breakfast shopping list" list
+    And I opened "Breakfast shopping list"
+    And I add 10 "eggs" product
+    When I buy "My new task" and mark this on my list
     And I go to lists page
-    Then I should see "Lists for krystian"
-    And I should not see "My new list"
+    #Then I should see "Lists for krystian"
+    Then I should not see "Breakfast shopping list"

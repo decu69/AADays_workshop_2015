@@ -1,5 +1,5 @@
 class LoginPage < BasePage
-
+  @username = nil
   def initialize(session)
     super(session)
   end
@@ -7,6 +7,7 @@ class LoginPage < BasePage
   def mapNameToSelector(name)
     case name
       when 'username field'
+        @username = name
         '#username'
 
       when 'password field'

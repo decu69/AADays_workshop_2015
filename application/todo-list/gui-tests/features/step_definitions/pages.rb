@@ -19,18 +19,19 @@ end
 When(/^I go to (.+?) page$/) do |pageName|
   @page = createPageObject(pageName)
   @page.visit
+  @page.look_for(@login_page.username)
 end
 
-When(/^I wait until pending requests will finish$/) do
-  @page.waitForPendingRequests(@page.getSession())
-end
+#When(/^I wait until pending requests will finish$/) do
+#  @page.waitForPendingRequests(@page.getSession())
+#end
 
 Given(/^I am logged in$/) do
-  @page = createPageObject("log in")
-  @page.visit
-  @page.type("krystian", "username field")
-  @page.type("test", "password field")
-  @page.click("log in button")
+  @login_page = createPageObject("log in")
+  @login_page.visit
+  @login_page.type("krystian", "username field")
+  @login_page.type("test", "password field")
+  @login_page.click("log in button")
 end
 
 When(/^I enter correct login and password$/) do

@@ -1,7 +1,7 @@
 Feature: User can log in to the account
-  As a Krystian
+  As a shopaholic Krystian
   I want to log in to the application
-  In order to see my TODO lists
+  In order to see my shopping lists
 
   @test_gui_1
   Scenario: Log in to the application

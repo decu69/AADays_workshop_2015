@@ -33,7 +33,7 @@ class ListController < ApplicationController
         return
       end
 
-      product = list.products.where(:id => params[:taskId]).first
+      product = list.products.where(:id => params[:productId]).first
 
       if product.closed
         product.open!
@@ -78,7 +78,7 @@ class ListController < ApplicationController
         return
       end
 
-      list.products.where(:id => params[:taskId]).first.destroy
+      list.products.where(:id => params[:productId]).first.destroy
       list.save!
     end
 
