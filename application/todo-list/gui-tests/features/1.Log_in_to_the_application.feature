@@ -6,7 +6,5 @@ Feature: User can log in to the account
   @test_gui_1
   Scenario: Log in to the application
     Given I am on log in page
-    When I type "krystian" into username field
-    And I type "test" into password field
-    And I click log in button
+    When I enter correct login and password
     Then I should see "Lists for krystian"

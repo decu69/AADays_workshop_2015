@@ -32,3 +32,9 @@ Given(/^I am logged in$/) do
   @page.type("test", "password field")
   @page.click("log in button")
 end
+
+When(/^I enter correct login and password$/) do
+  @page.type("krystian", "username field")
+  @page.type("test", "password field")
+  @page.click("log in button")
+end

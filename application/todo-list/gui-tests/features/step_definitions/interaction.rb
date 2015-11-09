@@ -25,3 +25,18 @@ end
 When(/^I mark checkbox near "([^"]+)"$/) do |name|
   @page.checkNear(name)
 end
+
+
+Given(/^I add "([^"]+)" list$/) do |name|
+  @page.type(name, "new list field")
+  @page.click("add button")
+end
+
+Given(/^I add "([^"]+)" task$/) do |name|
+  @page.type(name, "new task field")
+  @page.click("add button")
+end
+
+When(/^I mark "([^"]+)" task as done$/) do |name|
+  @page.checkNear(name)
+end
