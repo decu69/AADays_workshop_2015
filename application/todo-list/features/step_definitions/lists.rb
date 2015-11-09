@@ -37,7 +37,7 @@ Given(/^there is one empty list with name "([^"]+)"$/) do |listName|
 end
 
 Given(/^"([^"]+)" should see "([^"]+)"$/) do |username, listName|
-  User.where(:username => username).first.lists.where(:name => listName).count.should == 1
+  User.where(:username => username).first.products.where(:name => listName).count.should == 1
 end
 
 Given(/^there are no shopping lists$/) do
