@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>
-      Agile QA - Pragmatyczne zapewnianie jakości
+      Zwinność w automatyzacji
     </title>
 
     <meta name="author"
@@ -208,7 +208,7 @@
     <div class="reveal">
       <div class="slides">
         <section id="intro">
-          <h2>Automatyzacja w oparciu o dobrą komunikację z klientem</h2>
+          <h2>Zwinność w automatyzacji</h2>
           <h4>2015</h4>
           <span class="license">
             License:
@@ -244,19 +244,6 @@
                 <li>
                   Nie nadaje się ona do wszystkich typów aplikacji i projektów - raczej do produktów kierowanych do konkretnej grupy użytkowników.
                 </li>
-              </ul>
-            </aside>
-          </section>
-
-          <section>
-            <h2><em>UCD &amp; Agile</em></h2>
-
-            <img src="img/AgileUCDPhases.jpg" alt="Fazy pracy nad projektem" />
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">KAMILA</li>
-                <li><time>2 minuty</time></li>
               </ul>
             </aside>
           </section>
@@ -607,7 +594,7 @@
             <h3>Rozmowa z <em>product ownerem</em></h3>
 
             <time id="us-assignment-timer" class="countdown">
-              <span class="hours">00</span>:<span class="minutes">15</span>:<span class="seconds">00</span>
+              <span class="hours">00</span>:<span class="minutes">10</span>:<span class="seconds">00</span>
             </time>
 
             <script>
@@ -616,14 +603,14 @@
 
                 var element = document.getElementById("us-assignment-timer");
 
-                element.addEventListener("click", createTimer(element, minutes(15)));
+                element.addEventListener("click", createTimer(element, minutes(10)));
               } ());
             </script>
 
             <aside class="notes">
               <ul>
                 <li class="speaker">RAZEM</li>
-                <li><time>15 minut</time></li>
+                <li><time>10 minut</time></li>
                 <li>
                   ZADANIE: Rozmowa z PO.
                 </li>
@@ -818,100 +805,7 @@
           </section>
 
         </section>
-        <section>
-
-          <section>
-            <h2>Architektura testów</h2>
-            <p>architektura wielowarstwowa</p>
-            <img class="big white-background" src="img/multi_layer_architecture.png" alt="Multi layer architecture" />
-          </section>
-
-          <section data-pyramid="true">
-            <h2>Piramida testów</h2>
-
-            <div class="svg-placeholder"></div>
-
-          </section>
-
-          <section>
-            <h2> Odwrotna piramida </h2>
-            <img class="big white-background" src="img/odwrotna_piramida.png" alt="Odwrócona piramida" />
-          </section>
-
-        </section>
-
-        <section>
-          <section data-pyramid="true" data-pyramid-active="2">
-            <h2>Acceptance tests</h2>
-
-            <div class="svg-placeholder"></div>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">WOJTEK</li>
-                <li><time>1 minuta</time></li>
-              </ul>
-            </aside>
-          </section>
-
-          <section>
-            <h2>Acceptance tests</h2>
-            <h3><i>Dlaczego od środka?</i></h3>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">WOJTEK</li>
-                <li><time>2 minuty</time></li>
-                <li>
-                  Tak naprawdę, zaczynamy Naszą podróż od środka piramidy. Rozpoczynamy od testów, które są najmniej skomplikowane, i najbardziej wytrzymałe jeśli chodzi o stabilność.
-                </li>
-                <li>
-                  Innymi słowy są najbardziej 'user-friendly' na początek.
-                </li>
-              </ul>
-            </aside>
-          </section>
-
-          <section>
-            <h2>Acceptance tests</h2>
-            <h3><i>Testy akceptacyjne</i></h3>
-
-            <ul>
-              <li>Testy integracyjne.</li>
-              <li>Testy funkcjonalne.</li>
-              <li>Testy regresyjne.</li>
-              <li>Testy domeny i logiki.</li>
-            </ul>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">WOJTEK</li>
-                <li><time>2 minuty</time></li>
-                <li>
-                  Testy akceptacyjne jak sama nazwa wskazuje, oparte są o zestaw kryteriów zdefiniowanych przez użytkownika jako kluczowe do spełnienia, aby daną funkcjonalność uznać za zakończoną i wdrożoną.
-                </li>
-                <li>
-                  Innymi słowy, klient definiuje coś co będzie akceptował, jeśli spełni określone założenia.
-                </li>
-                <li>
-                  Pojęcie testów integracyjnych dość mocno ewoluowało w czasie, obecnie testy te określa się jako testy przekrojowe, jednak nie zawierające żadnych zewnętrznych serwisów - integracja odbywa się tylko i wyłącznie na poziomie kodu.
-                </li>
-                <li>
-                  Testy funkcjonalne weryfikują nowe funkcje dostępne w aplikacji, testy domenowe i logiki biznesowej skupiają się na pokryciu najważniejszych części kodu zw. z biznesem.
-                </li>
-                <li>
-                  Najmniej doceniane, a przynoszące największe zyski czyli testy regresyjne skupiają się na dokładnym pokryciu przypadku bądź User Story użytkownika powodującej błąd.
-                </li>
-              </ul>
-            </aside>
-          </section>
-
-      <section>
-        <h2>Cykl ATDD</h2>
-        <img src="img/ATDD.png" alt="Cykl ATDD" />
-      </section>
-
-        </section>
+      
 
         <section>
 
@@ -928,8 +822,6 @@
             <ul>
               <li>Sposób zapisu</li>
               <li>Mocno zorientowany na Agile</li>
-              <li><em>Story BDD</em></li>
-              <li><em>Spec BDD</em></li>
             </ul>
 
             <aside class="notes">
@@ -963,7 +855,7 @@
           </section>
 
           <section>
-            <h2>Story BDD</h2>
+            <h2>BDD</h2>
 
             <p class="nicer-container">
               Opis funkcjonalności i logiki biznesowej z punktu widzenia dostarczonej wartości dla klienta.
@@ -984,7 +876,7 @@
           </section>
 
           <section>
-            <h2>Story BDD - Formaty</h2>
+            <h2>BDD - Formaty</h2>
 
             <ul>
               <li>
@@ -1021,29 +913,6 @@ THEN ... weryfikacja</code></pre>
                 <li><time>2 minuty</time></li>
                 <li>
                   Bardzo często odwzorowuje się uster stories na testy BDD. Podczas tego procesu, bardzo często korzysta się z różnego rodzaju formatów.
-                </li>
-              </ul>
-            </aside>
-          </section>
-
-          <section>
-            <h2>Spec BDD</h2>
-
-            <p>
-              Niskopoziomowy opis implementacji konkretnego fragmentu.
-            </p>
-
-            <h3><i>TDD 2.0</i></h3>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">WOJTEK</li>
-                <li><time>1 minuta</time></li>
-                <li>
-                  Nie skupiamy się za bardzo na tej części, ponieważ zajmiemy się tym w następnej części - natomiast warto wspomnieć, że za pomocą BDD możemy zapisać również testy poziomu niższego, jednostkowego.
-                </li>
-                <li>
-                  Trzeba być świadomym tego, że testy jednostkowe w końcowym rozrachunku, nawet zapisane językiem domenowym, będą zawierały kroki na bardzo szczegółowym poziomie - dużo detali implementacyjnych.
                 </li>
               </ul>
             </aside>
@@ -1112,138 +981,6 @@ THEN ... weryfikacja</code></pre>
               <ul>
                 <li class="speaker">RAZEM</li>
                 <li><time>5 minut</time></li>
-              </ul>
-            </aside>
-          </section>
-
-        </section>
-
-        <section>
-
-          <section data-pyramid="true" data-pyramid-active="4">
-            <h2>Unit tests</h2>
-            <h3><i>Testy jednostkowe</i></h3>
-
-            <div class="svg-placeholder"></div>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">WOJTEK</li>
-                <li><time>1 minuta</time></li>
-              </ul>
-            </aside>
-          </section>
-
-          <section>
-            <h2>Unit tests</h2>
-            <h3><i>Testy jednostkowe</i></h3>
-
-            <ul>
-              <li>Podstawowa warstwa testów</li>
-              <li>Dostarcza najszybciej informację zwrotną</li>
-              <li>Typ testów biało-skrzynkowych</li>
-              <li>Zawiera detale implementacyjne</li>
-              <li><em>Unit</em> to jednostka funkcjonalna</li>
-              <li>Najlepszy stosunek: <strong><sup>KOSZT</sup> / <sub>ZYSK</sub></strong></li>
-            </ul>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">WOJTEK</li>
-                <li><time>2 minuty</time></li>
-                <li>
-                  Unit Test to nie test klasy, funkcji, modułu - to test jednostki funkcjonalnej, grupy, przestrzeni w domenie.
-                </li>
-                <li>
-                  Zapewnia utrzymanie niezmienników w kodzie - wszystko musi zawsze działać!
-                </li>
-                <li>
-                  Kod łatwo testowalny wspiera luźne powiązanie komponentów.
-                </li>
-                <li>
-                  Testy jednostkowe zapobiegają degradacji struktury kodu, każde odejście od dobrych praktyk sprawia trudność w testowaniu.
-                </li>
-                <li>
-                  Testy jednostkowe dokumentują kod, stanowiąc przykłady jego użycia.
-                </li>
-                <li>
-                  Drobna granulacja testów pozwala na szybkie wprowadzanie zmian w logice.
-                </li>
-                <li>
-                  Szybki feedback na temat efektów wywołanych przez zmiany.
-                </li>
-                <li>
-                  Zmniejszenie obaw związanych z przeoczonymi efektami ubocznymi w odległych częściach aplikacji.
-                </li>
-                <li>
-                  Można dokonywać refaktoryzacji i eksperymentować bez ryzyka.
-                </li>
-              </ul>
-            </aside>
-          </section>
-
-          <section>
-            <h2>TDD</h2>
-
-            <img class="medium white-background" src="img/TDD.png" alt="TDD Cycle" />
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">WOJTEK</li>
-                <li><time>2 minuty</time></li>
-                <li>
-                  Napisz test udowadniający istnienie błędu lub spełniający kryteria jednej małej części funkcjonalności.
-                </li>
-                <li>
-                  Uruchom test, zaobserwuj jego porażkę. Badanie stanu wejściowego.
-                </li>
-                <li>
-                  Napisz minimalną ilość (jak najprościej) kodu umożliwiającego przejście nowego testu.
-                </li>
-                <li>
-                  <ul>
-                    <li>
-                      Podczas uzyskiwania wiedzy na temat problemu w ramach pisania kodu możesz zmieniać test.
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  Uruchom test ponownie by zaobserwować jego sukces.
-                </li>
-                <li>
-                  Uruchom cały zestaw testów aby sprawdzić czy nie wprowadzono regresji.
-                </li>
-                <li>
-                  Po kilku takich cyklach, zauważysz zależności, powtarzalność - wtedy refaktoryzuj napisany kod.
-                </li>
-              </ul>
-            </aside>
-          </section>
-
-          <section class="assignment">
-            <h1>Zadanie</h1>
-
-            <time id="ut-assignment" class="countdown">
-              <span class="hours">00</span>:<span class="minutes">30</span>:<span class="seconds">00</span>
-            </time>
-
-            <script>
-              (function () {
-                "use strict";
-
-                var element = document.getElementById("ut-assignment");
-
-                element.addEventListener("click", createTimer(element, minutes(30)));
-              } ());
-            </script>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">RAZEM</li>
-                <li><time>30 minut</time></li>
-                <li>
-                  ZADANIE: Testy jednostkowe (TDD).
-                </li>
               </ul>
             </aside>
           </section>
@@ -1475,6 +1212,81 @@ THEN ... weryfikacja</code></pre>
                 </li>
               </ul>
             </aside>
+          </section>
+
+        </section>
+
+         <section>
+
+          <section>
+            <h2>Automatyzacja środowiska</h2>
+          </section>
+
+          <section>
+            <h2>Po co osobne środowisko testowe?</h2>
+
+            <ul>
+              <li>'U mnie działa'!</li>
+              <li>Czasochłonne stawianie środowiska dla nowego pracownika</li>
+              <li>Środowisko powinno być (mniejszą) kopią środowiska produkcyjnego</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Continuous Integration</h2>
+            <ul>
+              <li>automatyczne buildy</li>
+              <li>automatyczne testy</li>
+              <li>automatyczne wdrożenie? (CD) </li>
+            </ul>
+            <img class="big white-background"
+                 src="img/continuous-delivery-deployment-sm.jpg"
+                 alt="Continuous integration" />
+            <p>
+            <a href="http://blog.crisp.se/2013/02/05/yassalsundman/continuous-delivery-vs-continuous-deployment">http://blog.crisp.se/2013/02/05/yassalsundman/continuous-delivery-vs-continuous-deployment</a>
+            </p>
+          </section>
+
+          <section>
+            <h2>Provisioning</h2>
+            <h2>Zarządanie konfiguracją</h2>
+            <ul>
+              <li>Chef/Puppet/Ansible/etc.</li>
+              <li>Npm/Choco/Bundle/etc.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Wirtualizacja środowiska</h2>
+            <ul>
+              <li>VirtualBox, VMWare, Hyper-V</li>
+              <li>Vagrant</li>
+              <li>Docker</li>
+              <li>IaaC / DevOps</li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Przykładowa konfiguracja vagranta</h3>
+            <pre><code>Vagrant.configure(2) do |config|
+  config.vm.box = "win7IE10_with_winRM"
+  config.vm.box_url = "http://aka.ms/vagrant-win7-ie10"
+  ...
+  config.vm.network :forwarded_port, guest: 5985, host: 55985,
+                    id: "winrm", auto_correct: true
+  config.vm.network "private_network"
+  ...
+  config.vm.provider "virtualbox" do |vb|
+    vb.gui = true
+    vb.memory = "1024"
+    vb.cpus = 2
+    vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+  end
+  ...
+  config.vm.provision "shell", inline: "choco install ruby1.9 -y"
+  config.vm.provision "shell", inline: "choco install ruby.devkit -y"
+  ...
+end         </code></pre>
           </section>
 
         </section>
