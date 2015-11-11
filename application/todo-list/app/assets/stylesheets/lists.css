@@ -35,6 +35,7 @@
     background: rgb(115, 150, 110);
 }
 
+.task-list__product__buy,
 .task-lists__list__info,
 .task-list__task__info {
     float: left;
@@ -72,6 +73,7 @@
 }
 
 input.task-state,
+.task-list__product__buy,
 .task-list__task__delete,
 .task-lists__list__delete {
     cursor: pointer;

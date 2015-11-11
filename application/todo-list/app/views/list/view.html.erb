@@ -8,8 +8,10 @@
            data-list-id="<%= @list.id %>"
            name="<%= @list.id.to_s + '_' + product.id.to_s %>"
            <% if product.closed %>checked="checked"<% end %> >
-           <label class="pressable transition" for="<%= @list.id.to_s + '_' + product.id.to_s %>"><% if product.closed %>Bought <% else %> Buy <% end %></label>
-    <div class="task-list__task__info">
+    <label class="pressable transition" for="<%= @list.id.to_s + '_' + product.id.to_s %>"><% if product.closed %>Bought <% else %> Buy all<% end %></label>
+    <input type="button" class="task-list__product__buy" name="<%= @list.id.to_s + '_' + product.id.to_s + 'buy'%>"  data-task-id="<%= product.id %>" data-list-id="<%= @list.id %>" value="Buy" />
+
+       <div class="task-list__task__info">
         <span class="task-list__task__info__date"><%= h(product.date) %></span>
         <span class="task-list__task__info__title"><%= h(product.title) %></span>
         <span class="task-list__task__info__quantity">[ Quantity: <%= h(product.quantity) %> ]</span>

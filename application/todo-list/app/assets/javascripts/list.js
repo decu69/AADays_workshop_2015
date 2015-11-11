@@ -46,6 +46,26 @@
         return false;
     });
 
+    $(".task-list__product__buy").on("click", function(event) {
+        var $this = $(this);
+
+        //$this.attr("disabled", true);
+
+        $.ajax({
+            url: "/lists/" + $this.attr("data-list-id") + "/products/" + $this.attr("data-task-id"),
+            type: "POST",
+            success: function() {
+                window.location.reload();
+            },
+            error: function(error) {
+                console.error(error);
+            }
+        });
+
+        event.preventDefault();
+        return false;
+    });
+
     $(".task-state + label").on("mousedown", function(event) {
         var $this = $(this);
         var $cb = $this.prev();
@@ -66,7 +86,8 @@
                     $cb.prop("checked", !originalChecked);
                     $this.text((originalChecked ? "Buy" : "Bought"));
                     taskContainer.toggleClass("task-list__task--done");
-                    $cb.removeAttr("disabled");
+                    window.location.reload();
+                    //$cb.removeAttr("disabled");
                 },
                 error: function(error) {
                     document.write(error.responseText);

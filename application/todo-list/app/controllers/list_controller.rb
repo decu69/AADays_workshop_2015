@@ -39,9 +39,11 @@ class ListController < ApplicationController
         product.open!
       else
         product.close!
+        product.quantity = 0
       end
 
       product.save!
+      list.save!
     end
 
     head :ok
@@ -67,6 +69,26 @@ class ListController < ApplicationController
     else
       head :ok
     end
+  end
+
+  def update_product
+    if checkAuthentication()
+      list = List.where(:id => params[:id]).first
+
+      if list.user.username != current_user
+        redirect_to '/'
+        return
+      end
+
+      product = list.products.where(:id => params[:productId]).first
+      if product.quantity >= 1
+        product.quantity -= 1
+        end
+
+      product.save!
+      list.save!
+      head :ok
+      end
   end
 
   def delete_product
