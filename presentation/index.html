@@ -336,17 +336,17 @@
         "As a coffee addict , I want to drink some coffee, so that i got hyper speed all the day"
       </section>
       <section>
-        Given kawa, cukier, kubek, łyżeczka i zagotowana woda jest na stole<br>
+        "Given kawa, cukier, kubek, łyżeczka i zagotowana woda jest na stole<br>
 When użytkownik wsypie kawę do kubka<br>
 And użytkownik zaleje kawę wrzątkiem<br>
 And użytkownik doda cukier<br>
 And użytkownik pomiesza wszystkie składniki łyżeczką<br>
-Then kawa jest gotowa do picia<br>
+Then kawa jest gotowa do picia"<br>
       </section>
       <section>
-      Jako kelnerka<br>
+      "Jako kelnerka<br>
 Chcę przygotować kawę<br>
-Żeby sprzedać ją klientowi<br>
+Żeby sprzedać ją klientowi"<br>
       </section>
     </section>
         <section>
@@ -371,8 +371,8 @@ Chcę przygotować kawę<br>
                 <ul>
                     <li>Zamężna</li>
                     <li>Dwoje dzieci (11 i 14 lat)</li>
-                    <li>Uwielbia swoją daczę na mazurach</li>
-                    <li>Uzależniona od zakupów</li>
+                    <li>Uwielbia robić zakupy</li>
+                    <li>Lubi podróże</li>
                 </ul>
               </li>
               <li><b>HOBBY:</b> Zakupy, Podróże, Dzieci</li>
@@ -381,13 +381,14 @@ Chcę przygotować kawę<br>
           </section>
 
           <section>
-            <img src="img/Krystian.png" class="stick lower" width="150" height="170" alt="Klient" />
+            <img src="img/Krystian.png" class="stick" width="150" height="170" alt="Klient" />
 
             <ul class="no-bullets text_width">
               <li>
                 <b>NIE LUBI:</b>
                 <ul>
-                    <li>zapominać</li>
+                    <li>Zapominać</li>
+                    <li>Nie mieć planu</li>
                 </ul>
               </li>
               <li>
@@ -401,8 +402,8 @@ Chcę przygotować kawę<br>
               <li>
                 <b>OCZEKIWANIA:</b>
                 <ul>
-                    <li>Pomocna dłoń w codziennych obowiązkach.</li>
-                    <li>Łatwość zapisywania zadań.</li>
+                    <li>Pomocna dłoń w codziennych zakupach zarówno w pracy jak i w domu</li>
+                    <li>Łatwość zapisywania zakupów</li>
                     <li>Zawsze pod ręką.</li>
                 </ul>
               </li>
@@ -412,13 +413,13 @@ Chcę przygotować kawę<br>
 
           <section>
             <q class="nicer-container">
-              Nasz klient to bogaty, zmanierowany prezes firmy farmaceutycznej, który chce robić efektywnie zakupy.
+              Nasz klient to pani sekretarka, który chce robić efektywnie zakupy.
             </q>
             <q class="nicer-container">
-              Ma niestety problemy z pamięcią. Zawsze zapomina co ma kupić, lecytyna nie pomaga. Potrzebuje pomocy w zapamiętywaniu.
+              Ma niestety problemy z pamięcią. Zawsze zapomina coś kupić, lecytyna nie pomaga. Potrzebuje pomocy w zapamiętywaniu.
             </q>
             <q class="nicer-container">
-              Dzięki niej nie będzie musiał z pustymi rękami wracać do domu, gdzie czeka na niego wściekła żona.
+              Dzięki niej nie będzie musiała tłumaczyć się przed szefem z braku towaru jak i przed głodnym mężem w domu.
             </q>
           </section>
 
@@ -450,9 +451,9 @@ Chcę przygotować kawę<br>
             <h3>Użytkownik może się zalogować na własne konto</h3>
 
             <p class="fragment nicer-container">
-              <strong>Jako</strong> Krystian,<br>
+              <strong>Jako</strong> Matylda,<br>
               <strong>Chcę</strong> się zalogować do aplikacji,<br>
-              <strong>Żeby</strong> zobaczyć swoje listy zadań
+              <strong>Żeby</strong> zobaczyć swoje listy zakupów
             </p>
 
             <time id="us-1" class="countdown">
@@ -473,10 +474,10 @@ Chcę przygotować kawę<br>
 
           <section class="solution">
             <h2>Zadanie 2</h2>
-            <h3>Lista jest zamknięta kiedy wszystkie jej elementy są zrobione</h3>
+            <h3>Lista zakupów jest zamknięta kiedy wszystkie jej elementy są oznaczone jako kupione</h3>
 
             <p class="fragment nicer-container">
-              <strong>Jako</strong> Krystian,<br/>
+              <strong>Jako</strong> Matylda,<br/>
               <strong>Chcę</strong> zamknąć wszystkie elementy znajdujące się na liście,<br/>
               <strong>Żeby</strong> lista została automatycznie zamknięta i nie wprowadzała mnie w błąd
             </p>
@@ -498,11 +499,11 @@ Chcę przygotować kawę<br>
 
           <section class="solution">
             <h2>Zadanie 3</h2>
-            <h3>Lista zamknięta jest niedostępna dla użytkownika</h3>
+            <h3>Zamknięta lista zakupów jest niedostępna dla użytkownika</h3>
 
             <p class="fragment nicer-container">
-              <strong>Jako</strong> Krystian,<br>
-              <strong>Chcę</strong> aby moje zamknięte listy nie były widoczne,<br>
+              <strong>Jako</strong> Matylda,<br>
+              <strong>Chcę</strong> aby moje zamknięte listy zakupów nie były widoczne,<br>
               <strong>Żeby</strong> nie wprowadzały mnie w błąd
             </p>
 
@@ -655,15 +656,6 @@ THEN ... weryfikacja</code></pre>
               } ());
             </script>
 
-            <aside class="notes">
-              <ul>
-                <li class="speaker">RAZEM</li>
-                <li><time>30 minut</time></li>
-                <li>
-                  ZADANIE: Testy akceptacyjne na poziomie logiki domenowej (BDD).
-                </li>
-              </ul>
-            </aside>
           </section>
 
         </section>
@@ -776,16 +768,6 @@ THEN ... weryfikacja</code></pre>
                 element.addEventListener("click", createTimer(element, minutes(30)));
               } ());
             </script>
-
-            <aside class="notes">
-              <ul>
-                <li class="speaker">RAZEM</li>
-                <li><time>30 minut</time></li>
-                <li>
-                  ZADANIE: Testy automatyczne GUI.
-                </li>
-              </ul>
-            </aside>
           </section>
 
         </section>
