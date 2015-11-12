@@ -34,11 +34,24 @@ end
 
 Given(/^I add (\d+) "([^"]+)" product$/) do |quantity, name|
   @page.type(name, "new product name")
-  @page.type(quantity, "product quantity")
+  @page.type(quantity, "new product quantity")
   @page.click("add button")
 end
 
 When(/^I buy "([^"]+)" and mark this on my list$/) do |name|
   @page.checkNear(name)
   @page.waitForPendingRequests(@page.getSession())
+end
+
+Then(/^I should see (\d+) "([^"]+)" product to buy/) do |quantity, name|
+  @session = @page.getSession()
+  element = @session.find(
+      :xpath,
+      "//li[@class='task-list__task  cf' and ./span[contains(text(),#{name})] and ./span[contains(text(),#{quantity})]]")
+  element.find(:xpath, "//label[contains(text(),'Buy')]")
+
+
+end
+
+When(/^I can`t buy eggs as they`ve already sold, so I can just drink beer for the morning breakfast$/) do
 end

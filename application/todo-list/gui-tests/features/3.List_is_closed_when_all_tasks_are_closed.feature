@@ -12,7 +12,9 @@ Feature: Shopping list is closed when all product are bought
     And I add 4 "beers" product
     And I add 10 "eggs" product
     When I buy "beers" and mark this on my list
-    And I buy "eggs" and mark this on my list
+    And I can`t buy eggs as they`ve already sold, so I can just drink beer for the morning breakfast
     And I go to lists page
     Then I should see "Lists for krystian"
-    And I should not see "ASAP shopping"
+    And I should see "ASAP shopping"
+    When I opened "ASAP shopping"
+    Then I should see 10 "eggs" product to buy

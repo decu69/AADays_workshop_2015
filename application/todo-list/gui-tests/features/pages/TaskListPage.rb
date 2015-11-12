@@ -17,11 +17,17 @@ class TaskListPage < BasePage
       when 'new product name'
         '#product_name'
 
-      when 'product quantity'
+      when 'new product quantity'
         '#product_quantity'
 
       when 'add button'
         '#add-new-product'
+
+      when 'product name'
+        '#task-list__task__title'
+
+      when 'product quantity'
+        '#task-list__task__quantity'
 
       else
         fail("There is no '#{name}' in the TaskListPage object mapping definition!")
