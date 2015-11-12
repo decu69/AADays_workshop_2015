@@ -8,7 +8,7 @@ class TaskListPage < BasePage
   def selectCheckBoxNearName(name)
     @session.find(
       :xpath,
-      "/html/body/section/ul/li/div/span[contains(text(), '#{name}')]/../preceding-sibling::label"
+      "/html/body/section/ul/li/span[contains(text(), '#{name}')]/preceding-sibling::label"
     )
   end
 
