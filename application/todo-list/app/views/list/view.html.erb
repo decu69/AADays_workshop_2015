@@ -1,4 +1,10 @@
 <h1 class="section-title"><%= @current_user %>: "<span><%=h(@list.name)%></span>" - shopping list </h1>
+<div class="task-list-header">
+  <span class="task-list-header__task__date">Date</span>
+  <span class="task-list-header__task__quantity">Quantity</span>
+  <span class="task-list-header__task__title">Title</span>
+  <span class="task-list-header__task__delete"></span>
+</div>
 <ul class="task-list">
 <% @list.products.each do |product| %>
   <li class="task-list__task <% if product.closed %>task-list__task--done<% end %> cf">
@@ -7,13 +13,13 @@
            data-task-id="<%= product.id %>"
            data-list-id="<%= @list.id %>"
            name="<%= @list.id.to_s + '_' + product.id.to_s %>"
-           <% if product.closed %>checked="checked"<% end %> >
-           <label class="pressable transition" for="<%= @list.id.to_s + '_' + product.id.to_s %>"><% if product.closed %>Bought <% else %> Buy <% end %></label>
-    <div class="task-list__task__info">
-        <span class="task-list__task__info__date"><%= h(product.date) %></span>
-        <span class="task-list__task__info__title"><%= h(product.title) %></span>
-        <span class="task-list__task__info__quantity">[ Quantity: <%= h(product.quantity) %> ]</span>
-    </div>
+           <% if product.closed %>checked="checked"<% end %> />
+    <label class="pressable transition" for="<%= @list.id.to_s + '_' + product.id.to_s %>">
+      <% if product.closed %>Bought <% else %> Buy <% end %>
+    </label>
+    <span class="task-list__task__date"><%= h(product.date) %></span>
+    <span class="task-list__task__quantity" title="<%= h(product.quantity) %>"><%= h(product.quantity) %></span>
+    <span class="task-list__task__title"><%= h(product.title) %></span>
     <input type="button" class="task-list__task__delete transition" data-task-id="<%= product.id %>" data-list-id="<%= @list.id %>" value="Delete" />
   </li>
 <% end %>

@@ -9,4 +9,5 @@ presentation/node_modules/
 *~
 *.bak
 .vagrant/
-.idea/*
+.idea/
+

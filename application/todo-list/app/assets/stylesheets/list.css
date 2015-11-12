@@ -10,12 +10,12 @@ input.task-state + label {
     position: static;
     height: 1.5rem;
     line-height: 1.5rem;
-    width: 4rem;
     opacity: 1;
     text-align: center;
     font-size: 0.875rem;
     font-family: 'Source Sans', helvetica, arial, sans-serif;
     font-weight: 600;
+    flex: 0 0 4rem;
 }
 
 input.task-state + label,
