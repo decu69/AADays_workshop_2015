@@ -12,6 +12,7 @@ class ListController < ApplicationController
     cookies[:SESSION].split(':')[0]
   end
 
+
   def view
     if checkAuthentication()
       @list = List.where(:id => params[:id]).first
@@ -81,9 +82,14 @@ class ListController < ApplicationController
       end
 
       product = list.products.where(:id => params[:productId]).first
-      if product.quantity >= 1
-        product.quantity -= 1
-        end
+
+      if params[:quantity]
+        product.quantity = params[:quantity]
+      else
+          if product.quantity >= 1
+            product.quantity -= 1
+            end
+      end
 
       product.save!
       list.save!

@@ -52,7 +52,7 @@
         //$this.attr("disabled", true);
 
         $.ajax({
-            url: "/lists/" + $this.attr("data-list-id") + "/products/" + $this.attr("data-task-id"),
+            url: "/lists/" + $this.attr("data-list-id") + "/products/update/" + $this.attr("data-task-id"),
             type: "POST",
             success: function() {
                 window.location.reload();
@@ -65,6 +65,30 @@
         event.preventDefault();
         return false;
     });
+
+    $(".product-quantity_update").on("keyup", function(event) {
+        if (event.keyCode === 13) {
+            var $this = $(this);
+            var $quantity = $("#updated_quantity"+$this.attr("data-task-id"))
+            var quantity = parseInt(sanitize($quantity.val().trim()), 10) || 1;
+            console.log (quantity)
+
+
+
+            $.ajax({
+                url: "/lists/" + $this.attr("data-list-id") + "/products/update/" + $this.attr("data-task-id") + "/" + quantity,
+                type: "POST",
+                success: function() {
+                    window.location.reload();
+                },
+                error: function(error) {
+                    console.error(error);
+                }
+
+            });
+            event.preventDefault();
+            return false;
+        }});
 
     $(".task-state + label").on("mousedown", function(event) {
         var $this = $(this);
@@ -84,7 +108,7 @@
                 type: "POST",
                 success: function() {
                     $cb.prop("checked", !originalChecked);
-                    $this.text((originalChecked ? "Buy" : "Bought"));
+                    $this.text((originalChecked ? "Buy all" : "Bought"));
                     taskContainer.toggleClass("task-list__task--done");
                     window.location.reload();
                     //$cb.removeAttr("disabled");

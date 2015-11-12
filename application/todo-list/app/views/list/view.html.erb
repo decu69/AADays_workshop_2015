@@ -14,7 +14,8 @@
        <div class="task-list__task__info">
         <span class="task-list__task__info__date"><%= h(product.date) %></span>
         <span class="task-list__task__info__title"><%= h(product.title) %></span>
-        <span class="task-list__task__info__quantity">[ Quantity: <%= h(product.quantity) %> ]</span>
+         <input  class="product-quantity_update" id="<%='updated_quantity'+product.id.to_s%>" type="text" size="4" data-task-id="<%= product.id %>" data-list-id="<%= @list.id %>" value="<%= h(product.quantity) %>"/>
+
     </div>
     <input type="button" class="task-list__task__delete transition" data-task-id="<%= product.id %>" data-list-id="<%= @list.id %>" value="Delete" />
   </li>
