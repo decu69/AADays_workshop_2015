@@ -1,3 +1,4 @@
+matylda = User.create!(:username => "matylda", :password => "test")
 andrzej = User.create!(:username => "andrzej", :password => "test")
 krystian = User.create!(:username => "krystian", :password => "test")
 
