@@ -1,6 +1,6 @@
 Feature: Shopping list management
   In order to remind about products to buy
-  As a Krystian
+  As a Matylda
   I want to create my shopping lists
 
   Scenario: Create new shopping list

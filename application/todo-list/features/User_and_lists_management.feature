@@ -4,10 +4,10 @@ Feature: Viewing lists accessible to the user
   I want to log-in and view only my lists
 
   Scenario: Lists are connected to the user
-    Given there is one authenticated user "Krystian" with password "123"
+    Given there is one authenticated user "Matylda" with password "123"
     And there is one user "Andrzej" with password "456"
-    And there is one shopping list named "Krystian's list" with 1 product to buy by "Krystian"
-    And "Krystian" should have "Krystian's list"
-    When "Krystian" log out
+    And there is one shopping list named "Matylda's list" with 1 product to buy by "Matylda"
+    And "Matylda" should have "Matylda's list"
+    When "Matylda" log out
     And authenticate "Andrzej" with password "456"
     Then "Andrzej" should have no lists

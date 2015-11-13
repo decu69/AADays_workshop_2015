@@ -1,6 +1,6 @@
 Feature: Closed list can be reopened at once
   In order to reopen closed list
-  As a Krystian
+  As a Matylda
   I want to reopen all subsequent tasks in closed list
 
   @skip

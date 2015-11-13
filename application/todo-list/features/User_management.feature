@@ -5,14 +5,14 @@ Feature: User Management
 
   Scenario: Create new user
     Given there are no users
-    When "Krystian" account is created with random password
-    Then "Krystian" account should be available
-    And "Krystian" should have non empty password
+    When "Matylda" account is created with random password
+    Then "Matylda" account should be available
+    And "Matylda" should have non empty password
 
   Scenario: Sucessful authentication
-    Given there is one user "Krystian" with password "123"
-    Then "Krystian" should be authenticated with password "123"
+    Given there is one user "Matylda" with password "123"
+    Then "Matylda" should be authenticated with password "123"
 
   Scenario: Unsucessful authentication
-    Given there is one user "Krystian" with password "123"
-    Then "Krystian" should not be authenticated with password "Invalid Password"
+    Given there is one user "Matylda" with password "123"
+    Then "Matylda" should not be authenticated with password "Invalid Password"

@@ -1,6 +1,6 @@
 Feature: Product Management
   In order to manage products and assignments
-  As a Krystian
+  As a Matylda
   I want to add products to my shopping lists
 
   Scenario: Add new product to shopping list

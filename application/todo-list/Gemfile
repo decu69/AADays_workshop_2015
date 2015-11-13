@@ -23,4 +23,4 @@ gem 'rails',                '~> 4.0.4'
 gem 'turbolinks'
 gem 'jquery-rails',         '~> 2.3.0'
 gem 'bower-rails'
-gem 'coffee-script-source', '1.8.0'
+

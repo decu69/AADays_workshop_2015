@@ -1,6 +1,6 @@
 Feature: Closed shopping lists are visible
   In order to see closed shopping lists
-  As a Krystian
+  As a Matylda
   I want to view lists which are closed
 
   @skip
