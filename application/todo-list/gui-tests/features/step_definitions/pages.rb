@@ -28,13 +28,13 @@ end
 Given(/^I am logged in$/) do
   @login_page = createPageObject("log in")
   @login_page.visit
-  @login_page.type("krystian", "username field")
+  @login_page.type("matylda", "username field")
   @login_page.type("test", "password field")
   @login_page.click("log in button")
 end
 
 When(/^I enter correct login and password$/) do
-  @page.type("krystian", "username field")
+  @page.type("matylda", "username field")
   @page.type("test", "password field")
   @page.click("log in button")
 end
