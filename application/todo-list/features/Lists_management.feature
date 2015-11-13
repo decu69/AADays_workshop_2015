@@ -37,7 +37,7 @@ Feature: Shopping list management
     And first visible product in list "Open list" will be signed as bought
     Then "Open list" should be available
 
-  Scenario: List with all closed tasks is invisible
+  Scenario: List with all closed products is invisible
     Given there is one shopping list named "Closed list" with 1 random products
     When "Closed list" will be opened
     And first visible product in list "Closed list" will be signed as bought

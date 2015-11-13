@@ -4,10 +4,10 @@ krystian = User.create!(:username => "krystian", :password => "test")
 
 list = List.create!(:name => "Test list")
 list.products.build(:title => "Test product on opened list")
-list.user_id = krystian.id
+list.user_id = matylda.id
 
 closed_list = List.create!(:name => "Closed list")
-closed_list.user_id = krystian.id
+closed_list.user_id = matylda.id
 
 product = Product.create!(:title => "Test product on closed list")
 closed_list.products << product

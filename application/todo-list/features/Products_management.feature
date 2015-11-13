@@ -10,23 +10,23 @@ Feature: Product Management
     Then 1 product in "Party shopping list" is available
     And "beer" item should be opened
 
-  Scenario: Task should has a date
+  Scenario: Product should has a date
     Given there is one shopping list named "Non-empty list" with one item named "Item on the list"
     When "Non-empty list" will be opened
     Then "Item on the list" item should have today's date
 
-  Scenario: Task should have a default state "Open"
+  Scenario: Product should have a default state "Open"
     Given there is one shopping list named "Non-empty list" with one item named "Opened by default"
     When "Non-empty list" will be opened
     Then "Opened by default" item should be opened
 
-  Scenario: Task state can be modified
+  Scenario: Product state can be modified
     Given there is one shopping list named "Non-empty list" with one item named "Task for modification"
     When "Non-empty list" will be opened
     And "Task for modification" item will be closed
     Then "Task for modification" item should be closed
 
-  Scenario: Task state can be toggled
+  Scenario: Product state can be toggled
     Given there is one shopping list named "Non-empty list" with one item named "Task for toggling"
     When "Non-empty list" will be opened
     And "Task for toggling" item will be closed
