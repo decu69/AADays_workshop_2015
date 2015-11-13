@@ -20,12 +20,12 @@ describe List do
   end
 
   it "should not be available when all of subsequent tasks are closed" do
-    closeAllTasks(@listName)
+    buyAllProducts(@listName)
     assertListAvailability(@listName, false)
   end
 
   it "should be available even when part of subsequent tasks are closed" do
-    closeNotAllTasks(@listName)
+    buyNotAllProducts(@listName)
     assertListAvailability(@listName, true)
   end
 

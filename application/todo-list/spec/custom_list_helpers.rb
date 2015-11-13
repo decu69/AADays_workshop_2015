@@ -1,21 +1,21 @@
-def closeAllTasks(listName)
+def buyAllProducts(listName)
   list = List.where(:name => listName).first
 
-  list.tasks.each do |task|
-    task.close!
-    task.save!
+  list.products.each do |product|
+    product.close!
+    product.save!
   end
 
   list.save!
 end
 
-def closeNotAllTasks(listName)
+def buyNotAllProducts(listName)
   list = List.where(:name => listName).first
 
-  list.tasks.each_with_index do |task, index|
+  list.products.each_with_index do |product, index|
     if index != 4
-      task.close!
-      task.save!
+      product.close!
+      product.save!
     end
   end
 
@@ -30,7 +30,7 @@ def createList(listName)
   list = List.create(:name => listName)
 
   (0...8).each do |i|
-    list.tasks.build(:title => "Task #{i}")
+    list.products.build(:title => "Product #{i}")
   end
 
   list.save!
