@@ -209,7 +209,7 @@
       <div class="slides">
         <section id="intro">
           <h2>Zwinność w automatyzacji</h2>
-          <h4>2015</h4>
+          <h4>Agile & Automation Days 16.11.2015</h4>
           <span class="license">
             License:
             <a href="http://creativecommons.org/licenses/by-nd/3.0/pl/">CC BY-ND 3.0 PL</a>
@@ -728,7 +728,7 @@ THEN ... weryfikacja</code></pre>
 
             <pre>
               <code>&lt;div class="container"&gt;
-  &lt;label&gt;&lt;input id="option" type="checkbox" /&gt; Opcja&lt;/label&gt;
+  &lt;label&gt;&lt;input id="option" type="checkbox" /&gt;Opcja&lt;/label&gt;
   &lt;input type="submit" value="Submit" /&gt;
 &lt;/div&gt;</code>
             </pre>
@@ -746,8 +746,8 @@ THEN ... weryfikacja</code></pre>
                 XPath
                 <ul>
                   <li><code>/div/label/input</code></li>
+                  <li><code>/div[contains(@class, 'container')]</code></li>
                   <li><code>/*[contains(text(), 'Opcja')]</code></li>
-                  <li><code>/div/preceding-sibling::input</code></li>
                 </ul>
               </li>
             </ul>
@@ -919,9 +919,6 @@ end         </code></pre>
                 </a>,
                 <a href="http://jnicklas.github.io/capybara">
                   Capybara
-                </a>,
-                <a href="http://rspec.info">
-                  RSpec
                 </a>
               </li>
             </ul>
