@@ -1,6 +1,6 @@
 Feature: Closed lists are not visible to the user
   As a Matylda
-  I want to display my TODO lists
+  I want to display my shopping lists
   In order to see only my active lists
 
   @test_gui_2

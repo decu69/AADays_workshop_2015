@@ -1,10 +1,10 @@
-Feature: Shopping list is closed when all product are bought
+Feature: Shopping list stays open when not all product bought
   As a Matylda
-  I want to buy only one product from my list
+  I want to see not bought products from my list
   In order to finish shopping and get all necessary products
 
   @test_gui_3
-  Scenario: Buy only one product from the list - 
+  Scenario: Buy available product from shopping list
     Given I am logged in
     And I am on lists page
     And I add "ASAP shopping" list
